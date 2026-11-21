@@ -35,26 +35,54 @@ export default function Hero({ onOpenShowreel }: HeroProps) {
              ========================================================= */}
           <div className="lg:col-span-6 space-y-6 sm:space-y-7">
             
-            {/* Top Subtitle Kicker */}
-            <div className="flex items-center gap-2.5 sm:gap-3">
-              <span className="w-6 sm:w-8 h-[2px] bg-amber-400" />
-              <span className="text-[11px] sm:text-xs uppercase font-bold tracking-[0.2em] sm:tracking-[0.25em] text-amber-400/90 font-mono">
+            {/* Eyebrow Kicker */}
+            <div className="flex items-center gap-3">
+              <span className="w-8 h-[2px] bg-amber-400" />
+              <span className="text-[12px] sm:text-[13px] uppercase font-semibold tracking-[0.22em] text-amber-400 font-mono">
                 DEHRADUN&apos;S PREMIER STUDIO
               </span>
             </div>
 
-            {/* Editorial Headline */}
-            <h1 className="font-editorial text-4xl sm:text-5xl md:text-6xl lg:text-[4.25rem] xl:text-[5rem] font-black tracking-tight text-white leading-[1.02] sm:leading-[0.98] drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
-              CRAFTED TO<br />
-              BE SEEN.<br />
-              <span className="italic font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-500 inline-block drop-shadow-[0_2px_12px_rgba(245,158,11,0.25)]">
-                MADE TO BE<br />
-                FELT.
-              </span>
-            </h1>
+            {/* Editorial Headline with Subtle Curved Underline */}
+            <div className="space-y-1.5">
+              <h1 className="font-editorial text-[clamp(2.5rem,5.2vw,5.15rem)] font-bold italic tracking-[-0.035em] text-white leading-[0.98] sm:leading-[1.02]">
+                <span className="block drop-shadow-[0_4px_16px_rgba(0,0,0,0.8)]">
+                  CRAFTED TO
+                </span>
+                <span className="block drop-shadow-[0_4px_16px_rgba(0,0,0,0.8)]">
+                  BE SEEN.
+                </span>
+                <span className="block pt-1.5 sm:pt-2.5 text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-500 font-semibold tracking-[-0.02em] whitespace-normal sm:whitespace-nowrap drop-shadow-[0_2px_12px_rgba(245,158,11,0.25)]">
+                  Made To Be Felt.
+                </span>
+              </h1>
+
+              {/* Decorative Curved Gold Underline */}
+              <div className="pt-0.5">
+                <svg
+                  className="w-56 sm:w-72 lg:w-80 h-3 sm:h-3.5 text-amber-400 pointer-events-none"
+                  viewBox="0 0 320 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3 10.5C75 2.5 220 2.5 317 8C235 4 105 4.5 3 10.5Z"
+                    fill="url(#goldCurveGrad)"
+                  />
+                  <defs>
+                    <linearGradient id="goldCurveGrad" x1="3" y1="6" x2="317" y2="6" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#FDE68A" />
+                      <stop offset="0.5" stopColor="#F59E0B" />
+                      <stop offset="1" stopColor="#D97706" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
 
             {/* Subtitle Description */}
-            <p className="text-sm sm:text-base md:text-lg text-zinc-300/90 max-w-lg font-light leading-relaxed">
+            <p className="text-base sm:text-lg lg:text-[1.125rem] text-zinc-300/90 max-w-xl font-light leading-relaxed">
               Commercial films, fashion editorials, pre-wedding cinema, and timeless visual storytelling crafted with precision.
             </p>
 
@@ -62,7 +90,7 @@ export default function Hero({ onOpenShowreel }: HeroProps) {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-1 sm:pt-2">
               <a
                 href="#book-slot"
-                className="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-black px-6 sm:px-7 py-3.5 rounded-full font-bold text-sm flex items-center justify-center gap-2.5 shadow-xl shadow-amber-500/20 hover:brightness-110 hover:-translate-y-0.5 transition-all text-center"
+                className="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-black px-7 py-3.5 rounded-full font-bold text-sm flex items-center justify-center gap-2.5 shadow-xl shadow-amber-500/20 hover:brightness-110 hover:-translate-y-0.5 transition-all text-center"
               >
                 <span>Book Your Session</span>
                 <ArrowRight className="w-4 h-4" />
@@ -70,7 +98,7 @@ export default function Hero({ onOpenShowreel }: HeroProps) {
 
               <a
                 href="#portfolio"
-                className="px-6 py-3.5 rounded-full font-medium text-sm text-zinc-200 border border-white/15 bg-white/5 hover:border-amber-400/50 hover:text-white backdrop-blur-md flex items-center justify-center gap-2 hover:-translate-y-0.5 transition-all text-center"
+                className="px-7 py-3.5 rounded-full font-medium text-sm text-zinc-200 border border-white/15 bg-white/5 hover:border-amber-400/50 hover:text-white backdrop-blur-md flex items-center justify-center gap-2 hover:-translate-y-0.5 transition-all text-center"
               >
                 <LayoutGrid className="w-4 h-4 text-amber-400" />
                 <span>Explore Portfolio</span>
@@ -80,8 +108,8 @@ export default function Hero({ onOpenShowreel }: HeroProps) {
             {/* Stats Row with Responsive Vertical Dividers */}
             <div className="pt-6 sm:pt-8 border-t border-zinc-800/80 grid grid-cols-3 gap-2 sm:gap-6 items-center">
               <div>
-                <p className="font-editorial text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">500+</p>
-                <p className="text-[9px] sm:text-[11px] text-zinc-400 uppercase tracking-wider sm:tracking-widest mt-0.5 sm:mt-1 font-medium">
+                <p className="font-editorial text-3xl sm:text-4xl lg:text-[2.5rem] font-bold text-white tracking-tight">500+</p>
+                <p className="text-[10px] sm:text-[11px] text-zinc-400 uppercase tracking-widest mt-1 font-medium">
                   SHOOTS DELIVERED
                 </p>
               </div>
@@ -89,8 +117,8 @@ export default function Hero({ onOpenShowreel }: HeroProps) {
               <div className="flex items-center gap-2 sm:gap-6">
                 <div className="h-8 sm:h-10 w-[1px] bg-zinc-800 shrink-0" />
                 <div>
-                  <p className="font-editorial text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">4K &amp; 8K</p>
-                  <p className="text-[9px] sm:text-[11px] text-zinc-400 uppercase tracking-wider sm:tracking-widest mt-0.5 sm:mt-1 font-medium">
+                  <p className="font-editorial text-3xl sm:text-4xl lg:text-[2.5rem] font-bold text-amber-400 tracking-tight">4K &amp; 8K</p>
+                  <p className="text-[10px] sm:text-[11px] text-zinc-400 uppercase tracking-widest mt-1 font-medium">
                     CINEMA STANDARD
                   </p>
                 </div>
@@ -99,9 +127,9 @@ export default function Hero({ onOpenShowreel }: HeroProps) {
               <div className="flex items-center gap-2 sm:gap-6">
                 <div className="h-8 sm:h-10 w-[1px] bg-zinc-800 shrink-0" />
                 <div>
-                  <p className="font-editorial text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">4.9/5</p>
-                  <p className="text-[9px] sm:text-[11px] text-zinc-400 uppercase tracking-wider sm:tracking-widest mt-0.5 sm:mt-1 font-medium">
-                    SATISFACTION
+                  <p className="font-editorial text-3xl sm:text-4xl lg:text-[2.5rem] font-bold text-white tracking-tight">4.9/5</p>
+                  <p className="text-[10px] sm:text-[11px] text-zinc-400 uppercase tracking-widest mt-1 font-medium">
+                    CLIENT SATISFACTION
                   </p>
                 </div>
               </div>
