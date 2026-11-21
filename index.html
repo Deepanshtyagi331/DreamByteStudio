@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DreamByte Studio | Cinema & Photography Production</title>
+  <meta name="description" content="DreamByte Studio is a premier photo & video production studio based in Dehradun. Specializing in commercial films, fashion, pre-wedding cinema, podcast studio rentals & brand visuals.">
+  <meta name="keywords" content="photo studio, video studio, Dehradun video production, commercial shoot, fashion photography, pre wedding cinema, podcast studio rental, DreamByte Studio">
+  <meta property="og:title" content="DreamByte Studio | Luxury Photo & Video Production">
+  <meta property="og:description" content="Frames that speak, stories that breathe. Book your studio slot or production team today.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dreambytestudio.in">
+  <meta name="theme-color" content="#0a0a0d">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a0a0d'/><circle cx='50' cy='50' r='28' stroke='%23f59e0b' stroke-width='6' fill='none'/><polygon points='44,38 64,50 44,62' fill='%23f59e0b'/></svg>">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            dark: '#0a0a0d',
+            zinc: {
+              850: '#1e1f26',
+              950: '#08080b'
+            },
+            amber: {
+              450: '#f59e0b',
+            }
+          },
+          fontFamily: {
+            syne: ['Syne', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            cinzel: ['Cinzel', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Syne:wght@500;600;700;800&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-dark text-slate-100 antialiased selection:bg-amber-500 selection:text-black">
+
+  <!-- Ambient Glow Effects -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scrollProgressBar" class="scroll-progress-bar"></div>
+
+  <!-- Navigation Bar -->
+  <header id="navbar" class="navbar-wrapper">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="#hero" class="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-lg p-1">
+          <div class="relative w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 via-amber-600 to-orange-700 flex items-center justify-center shadow-lg shadow-amber-500/20 group-hover:shadow-amber-500/40 transition-all duration-300">
+            <i class="fa-solid fa-play text-black text-sm translate-x-0.5"></i>
+            <span class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full border-2 border-[#0a0a0d] animate-pulse"></span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-syne font-extrabold text-xl tracking-tight text-white group-hover:text-amber-400 transition-colors">
+              DREAM<span class="text-amber-400 group-hover:text-white">BYTE</span>
+            </span>
+            <span class="text-[10px] tracking-[0.25em] uppercase text-zinc-400 -mt-1 font-semibold">Studio • Cinema</span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-zinc-300">
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#portfolio" class="nav-link">Portfolio</a>
+          <a href="#color-grading" class="nav-link">RAW to Cinema</a>
+          <a href="#studio-space" class="nav-link">Studio & Gear</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#reviews" class="nav-link">Reviews</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+        </nav>
+
+        <!-- CTA Action Buttons -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="tel:+918279720490" class="btn-ghost flex items-center gap-2 text-sm text-zinc-300 hover:text-white" title="Call DreamByte Studio">
+            <i class="fa-solid fa-phone text-amber-400 text-xs"></i>
+            <span class="hidden lg:inline">+91 82797 20490</span>
+          </a>
+          <a href="#book-slot" class="btn-primary text-sm px-5 py-2.5 rounded-full flex items-center gap-2 shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40">
+            <i class="fa-regular fa-calendar-check text-amber-950 font-bold"></i>
+            <span class="font-bold text-amber-950">Book a Slot</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Hamburger -->
+        <button id="mobileMenuBtn" class="md:hidden p-2 text-zinc-300 hover:text-white focus:outline-none" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars-staggered text-2xl"></i>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobileDrawer" class="mobile-drawer hidden md:hidden">
+      <div class="px-6 py-6 space-y-4">
+        <a href="#services" class="mobile-nav-link">Services</a>
+        <a href="#portfolio" class="mobile-nav-link">Portfolio & Films</a>
+        <a href="#color-grading" class="mobile-nav-link">Color Grading (Before/After)</a>
+        <a href="#studio-space" class="mobile-nav-link">Studio & Equipment</a>
+        <a href="#about" class="mobile-nav-link">About DreamByte</a>
+        <a href="#reviews" class="mobile-nav-link">Client Reviews</a>
+        <a href="#faq" class="mobile-nav-link">FAQ</a>
+        <div class="pt-4 border-t border-zinc-800 flex flex-col gap-3">
+          <a href="#book-slot" class="btn-primary text-center py-3 rounded-xl font-bold text-amber-950">
+            <i class="fa-regular fa-calendar-check mr-2"></i> Book Studio Slot
+          </a>
+          <a href="https://wa.me/918279720490?text=Hi%20DreamByte%20Studio,%20I%20want%20to%20inquire%20about%20a%20photoshoot%20/%20video%20shoot." target="_blank" rel="noopener noreferrer" class="btn-ghost text-center py-3 rounded-xl flex items-center justify-center gap-2 text-emerald-400">
+            <i class="fa-brands fa-whatsapp text-lg"></i> Instant WhatsApp Chat
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative min-h-[92vh] flex items-center pt-24 pb-16 overflow-hidden">
+      <!-- Background Video Overlay / Image Reel -->
+      <div class="absolute inset-0 z-0">
+        <div class="hero-bg-overlay"></div>
+        <img 
+          src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?auto=format&fit=crop&w=2000&q=80" 
+          alt="DreamByte Studio Cinema Rig & Stage" 
+          class="w-full h-full object-cover object-center scale-105 animate-subtle-zoom opacity-25 filter brightness-75 contrast-125"
+        >
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Column: Headline & Value Proposition -->
+          <div class="lg:col-span-7 space-y-6">
+            
+            <!-- Badges -->
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-zinc-900/80 border border-amber-500/30 backdrop-blur-md">
+              <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+              <span class="text-xs uppercase font-bold tracking-wider text-amber-400">Dehradun's Premier Studio</span>
+              <span class="text-zinc-600">•</span>
+              <a href="https://www.instagram.com/dreambytestudio.in" target="_blank" rel="noopener noreferrer" class="text-xs text-zinc-300 hover:text-white flex items-center gap-1">
+                <i class="fa-brands fa-instagram text-pink-500"></i> @dreambytestudio.in
+              </a>
+            </div>
+
+            <!-- Primary Title -->
+            <h1 class="font-syne text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold tracking-tight leading-[1.08] text-white">
+              CRAFTING <br class="hidden sm:inline">
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-orange-500 text-glow">
+                CINEMATIC STORIES
+              </span>
+              <br>& TIMELESS FRAMES.
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-lg sm:text-xl text-zinc-300 max-w-2xl font-light leading-relaxed">
+              We produce high-impact commercial films, high-fashion editorials, heartfelt pre-wedding cinema, and operate an acoustic multi-cam podcast studio ready for your vision.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <a href="#book-slot" class="btn-primary px-8 py-4 rounded-full font-bold text-base text-amber-950 flex items-center gap-3 shadow-xl shadow-amber-500/25 group">
+                <span>Book Your Session</span>
+                <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+              </a>
+
+              <button id="openShowreelBtn" class="btn-secondary px-6 py-4 rounded-full font-semibold text-base flex items-center gap-3 backdrop-blur-md group hover:border-amber-400/50">
+                <div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center group-hover:bg-amber-400 group-hover:text-black transition-all">
+                  <i class="fa-solid fa-play text-xs translate-x-0.5"></i>
+                </div>
+                <span>Watch Studio Showreel</span>
+              </button>
+            </div>
+
+            <!-- Key Trust Metrics -->
+            <div class="grid grid-cols-3 gap-6 pt-8 border-t border-zinc-800/80 max-w-lg">
+              <div>
+                <p class="font-syne text-2xl sm:text-3xl font-extrabold text-white">500+</p>
+                <p class="text-xs text-zinc-400 uppercase tracking-wider mt-1">Shoots Delivered</p>
+              </div>
+              <div>
+                <p class="font-syne text-2xl sm:text-3xl font-extrabold text-amber-400">4K & 8K</p>
+                <p class="text-xs text-zinc-400 uppercase tracking-wider mt-1">Cinema Standard</p>
+              </div>
+              <div>
+                <p class="font-syne text-2xl sm:text-3xl font-extrabold text-white">4.9/5</p>
+                <p class="text-xs text-zinc-400 uppercase tracking-wider mt-1">Client Satisfaction</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Interactive Featured Reel / Dynamic Visual Card -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative mx-auto max-w-md lg:max-w-none">
+              
+              <!-- Frame Decoration -->
+              <div class="absolute -inset-1.5 bg-gradient-to-tr from-amber-500 via-orange-600 to-amber-300 rounded-3xl blur-lg opacity-40 group-hover:opacity-75 transition duration-1000"></div>
+
+              <div class="relative bg-zinc-900/90 rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl backdrop-blur-xl">
+                
+                <!-- Cinema Header Bar -->
+                <div class="px-4 py-3 bg-zinc-950/80 border-b border-zinc-800 flex items-center justify-between text-xs text-zinc-400">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
+                    <span class="font-mono uppercase tracking-wider text-red-400 font-bold">REC • 24 FPS</span>
+                  </div>
+                  <div class="font-mono text-zinc-400">SONY FX3 • 50mm T1.2</div>
+                </div>
+
+                <!-- Featured Visual Media -->
+                <div class="relative aspect-[4/5] overflow-hidden group cursor-pointer" id="heroReelCard">
+                  <img 
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80" 
+                    alt="DreamByte Editorial Portrait Work" 
+                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 filter brightness-95"
+                  >
+
+                  <!-- Card Overlays -->
+                  <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+
+                  <!-- Floating Play Button -->
+                  <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="w-16 h-16 rounded-full bg-amber-400/90 text-black flex items-center justify-center shadow-xl shadow-amber-500/40 group-hover:scale-110 transition-transform">
+                      <i class="fa-solid fa-play text-xl translate-x-0.5"></i>
+                    </div>
+                  </div>
+
+                  <!-- Details at Bottom -->
+                  <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-black/60 backdrop-blur-md border border-white/10">
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-amber-400">Commercial / Fashion</span>
+                    <h3 class="font-syne text-lg font-bold text-white">Vogue Luminescence Collection</h3>
+                    <div class="flex items-center justify-between mt-2 text-xs text-zinc-300">
+                      <span>Direction & Color Grade: DreamByte</span>
+                      <span class="text-amber-400 font-semibold"><i class="fa-solid fa-eye mr-1"></i> Preview Reel</span>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Footer Feature Chips -->
+                <div class="p-4 bg-zinc-950/60 border-t border-zinc-800/80 flex items-center justify-between text-xs text-zinc-400">
+                  <span class="flex items-center gap-1.5"><i class="fa-solid fa-bolt text-amber-400"></i> Same-Day Teaser</span>
+                  <span class="flex items-center gap-1.5"><i class="fa-solid fa-cube text-amber-400"></i> 100% RAW Cinema</span>
+                  <span class="flex items-center gap-1.5"><i class="fa-solid fa-microphone-lines text-amber-400"></i> Sound Isolated</span>
+                </div>
+
+              </div>
+
+              <!-- Floating Info Card -->
+              <div class="absolute -bottom-6 -left-6 hidden sm:flex items-center gap-3 p-3.5 rounded-2xl bg-zinc-900/95 border border-amber-500/30 backdrop-blur-xl shadow-2xl">
+                <div class="w-10 h-10 rounded-xl bg-amber-400/20 text-amber-400 flex items-center justify-center">
+                  <i class="fa-solid fa-location-dot text-lg"></i>
+                </div>
+                <div>
+                  <p class="text-xs font-bold text-white">Dehradun Studio</p>
+                  <p class="text-[11px] text-zinc-400">Sahastradhara Rd, Near IT Park</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENT LOGO / PRESS BANNER -->
+    <section class="py-10 border-y border-zinc-800/60 bg-zinc-950/40 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-center text-xs uppercase tracking-[0.3em] font-semibold text-zinc-400 mb-6">
+          Trusted By Brands, Creators, Agencies & Couples
+        </p>
+        <div class="brand-ticker-wrap">
+          <div class="brand-ticker">
+            <span class="brand-item"><i class="fa-solid fa-gem mr-2 text-amber-400"></i> AURA JEWELS</span>
+            <span class="brand-item"><i class="fa-solid fa-shirt mr-2 text-amber-400"></i> URBAN THREADS</span>
+            <span class="brand-item"><i class="fa-solid fa-mug-hot mr-2 text-amber-400"></i> HIMALAYAN ROASTERS</span>
+            <span class="brand-item"><i class="fa-solid fa-hotel mr-2 text-amber-400"></i> THE VALE RESORT</span>
+            <span class="brand-item"><i class="fa-solid fa-podcast mr-2 text-amber-400"></i> FOUNDERS UNFILTERED</span>
+            <span class="brand-item"><i class="fa-solid fa-camera mr-2 text-amber-400"></i> DOON CREATIVE LABS</span>
+            <!-- Duplicate for seamless scroll -->
+            <span class="brand-item"><i class="fa-solid fa-gem mr-2 text-amber-400"></i> AURA JEWELS</span>
+            <span class="brand-item"><i class="fa-solid fa-shirt mr-2 text-amber-400"></i> URBAN THREADS</span>
+            <span class="brand-item"><i class="fa-solid fa-mug-hot mr-2 text-amber-400"></i> HIMALAYAN ROASTERS</span>
+            <span class="brand-item"><i class="fa-solid fa-hotel mr-2 text-amber-400"></i> THE VALE RESORT</span>
+            <span class="brand-item"><i class="fa-solid fa-podcast mr-2 text-amber-400"></i> FOUNDERS UNFILTERED</span>
+            <span class="brand-item"><i class="fa-solid fa-camera mr-2 text-amber-400"></i> DOON CREATIVE LABS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-24 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div>
+            <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-amber-400 mb-3">
+              <span class="w-2 h-0.5 bg-amber-400"></span>
+              What We Create
+            </div>
+            <h2 class="font-syne text-3xl sm:text-4xl md:text-5xl font-extrabold text-white">
+              MASTERFUL SERVICES FOR <br class="hidden sm:inline">
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-orange-400">EVERY SCREEN & FRAME</span>
+            </h2>
+          </div>
+          <p class="text-zinc-400 text-sm max-w-md">
+            Whether you need a full-scale TV commercial, high-fashion campaign, wedding cinema, or a ready-to-record podcast studio in Dehradun, we provide end-to-end production.
+          </p>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Service Card 1 -->
+          <div class="service-card group">
+            <div class="service-image-box">
+              <img 
+                src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80" 
+                alt="Commercial Brand Films" 
+                class="service-img group-hover:scale-110 transition-transform duration-700"
+              >
+              <div class="service-tag">Commercial Video</div>
+            </div>
+            <div class="p-6 space-y-4">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl group-hover:bg-amber-400 group-hover:text-black transition-colors">
+                <i class="fa-solid fa-video"></i>
+              </div>
+              <h3 class="font-syne text-xl font-bold text-white group-hover:text-amber-400 transition-colors">Commercial & Brand Films</h3>
+              <p class="text-zinc-400 text-sm leading-relaxed">
+                High-converting product commercials, corporate films, and social video ads shot in 4K/8K with cinema lenses, fluid gimbal moves, and licensed sound design.
+              </p>
+              <ul class="text-xs text-zinc-300 space-y-2 pt-2 border-t border-zinc-800">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Scripting, Storyboard & Direction</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Cinema Lighting & 4K Drone Aerials</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Hollywood DaVinci Resolve Color Grade</li>
+              </ul>
+              <div class="pt-4 flex items-center justify-between">
+                <span class="text-xs text-amber-400/90 font-mono">From ₹15,000 / project</span>
+                <a href="#book-slot" class="text-xs font-bold text-white hover:text-amber-400 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                  Book This <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div class="service-card group">
+            <div class="service-image-box">
+              <img 
+                src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80" 
+                alt="Fashion and Editorial Shoots" 
+                class="service-img group-hover:scale-110 transition-transform duration-700"
+              >
+              <div class="service-tag">Photography</div>
+            </div>
+            <div class="p-6 space-y-4">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl group-hover:bg-amber-400 group-hover:text-black transition-colors">
+                <i class="fa-solid fa-camera-retro"></i>
+              </div>
+              <h3 class="font-syne text-xl font-bold text-white group-hover:text-amber-400 transition-colors">Fashion & Editorial Shoots</h3>
+              <p class="text-zinc-400 text-sm leading-relaxed">
+                Stunning model portfolios, apparel lookbooks, jewelry campaigns, and magazine-ready editorials in our cyclorama studio or scenic Himalayan outdoors.
+              </p>
+              <ul class="text-xs text-zinc-300 space-y-2 pt-2 border-t border-zinc-800">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Creative Styling & Moodboard Curation</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Professional High-End Skin Retouching</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> In-House Vanity & Wardrobe Changing Room</li>
+              </ul>
+              <div class="pt-4 flex items-center justify-between">
+                <span class="text-xs text-amber-400/90 font-mono">From ₹8,000 / lookbook</span>
+                <a href="#book-slot" class="text-xs font-bold text-white hover:text-amber-400 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                  Book This <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div class="service-card group">
+            <div class="service-image-box">
+              <img 
+                src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800&q=80" 
+                alt="Podcast Studio Dehradun" 
+                class="service-img group-hover:scale-110 transition-transform duration-700"
+              >
+              <div class="service-tag">Studio Rental</div>
+            </div>
+            <div class="p-6 space-y-4">
+              <div class="w-12 h-12 rounded-xl bg-amber-400/10 text-amber-400 flex items-center justify-center text-xl group-hover:bg-amber-400 group-hover:text-black transition-colors">
+                <i class="fa-solid fa-microphone-lines"></i>
+              </div>
+              <h3 class="font-syne text-xl font-bold text-white group-hover:text-amber-400 transition-colors">Podcast & Talk Show Studio</h3>
+              <p class="text-zinc-400 text-sm leading-relaxed">
+                Plug-and-play acoustic studio in Dehradun with 3-camera 4K live switching, broadcast Shure SM7B mics, custom RGB neon ambiance, and instant raw exports.
+              </p>
+              <ul class="text-xs text-zinc-300 space-y-2 pt-2 border-t border-zinc-800">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> 4x Shure SM7B Mics + Rodecaster Pro II</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> 3-Angle 4K Multi-Cam Synchronization</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Short-form Reels/Shorts Cut Package</li>
+              </ul>
+              <div class="pt-4 flex items-center justify-between">
+                <span class="text-xs text-amber-400/90 font-mono">From ₹2,500 / hour</span>
+                <a href="#book-slot" class="text-xs font-bold text-white hover:text-amber-400 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                  Book Slot <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 4 -->
+          <div class="service-card group">
+            <div class="service-image-box">
+              <img 
+                src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" 
+                alt="Pre-Wedding and Wedding Cinema" 
+                class="service-img group-hover:scale-110 transition-transform duration-700"
+              >
+              <div class="service-tag">Cinema & Film</div>
+            </div>
+            <div class="p-6 space-y-4">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl group-hover:bg-amber-400 group-hover:text-black transition-colors">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+              <h3 class="font-syne text-xl font-bold text-white group-hover:text-amber-400 transition-colors">Pre-Wedding & Wedding Cinema</h3>
+              <p class="text-zinc-400 text-sm leading-relaxed">
+                Poetic, cinematic films that immortalize love stories. We shoot in scenic Rishikesh, Mussoorie, Dehradun hills, and exotic destination venues with cinematic grace.
+              </p>
+              <ul class="text-xs text-zinc-300 space-y-2 pt-2 border-t border-zinc-800">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Conceptual Narrative Teasers</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> 4K Drone & Slow-Motion Cinema</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Same-Day Edit for Reception Night</li>
+              </ul>
+              <div class="pt-4 flex items-center justify-between">
+                <span class="text-xs text-amber-400/90 font-mono">From ₹35,000 / package</span>
+                <a href="#book-slot" class="text-xs font-bold text-white hover:text-amber-400 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                  Inquire Now <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 5 -->
+          <div class="service-card group">
+            <div class="service-image-box">
+              <img 
+                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80" 
+                alt="Product and E-Commerce Photography" 
+                class="service-img group-hover:scale-110 transition-transform duration-700"
+              >
+              <div class="service-tag">E-Commerce</div>
+            </div>
+            <div class="p-6 space-y-4">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl group-hover:bg-amber-400 group-hover:text-black transition-colors">
+                <i class="fa-solid fa-box-open"></i>
+              </div>
+              <h3 class="font-syne text-xl font-bold text-white group-hover:text-amber-400 transition-colors">Product & E-Commerce Shoots</h3>
+              <p class="text-zinc-400 text-sm leading-relaxed">
+                Clean Amazon/Shopify white-background product photography, 360-degree interactive spins, and creative lifestyle setups that skyrocket your conversion rates.
+              </p>
+              <ul class="text-xs text-zinc-300 space-y-2 pt-2 border-t border-zinc-800">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Pure White 100% RGB Cutouts</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Lifestyle Prop & Tabletop Styling</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> High-Resolution Macro Lens Detail</li>
+              </ul>
+              <div class="pt-4 flex items-center justify-between">
+                <span class="text-xs text-amber-400/90 font-mono">From ₹300 / SKU</span>
+                <a href="#book-slot" class="text-xs font-bold text-white hover:text-amber-400 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                  Book This <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 6 -->
+          <div class="service-card group">
+            <div class="service-image-box">
+              <img 
+                src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" 
+                alt="Music Videos & Creative Concepts" 
+                class="service-img group-hover:scale-110 transition-transform duration-700"
+              >
+              <div class="service-tag">Music & Art</div>
+            </div>
+            <div class="p-6 space-y-4">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl group-hover:bg-amber-400 group-hover:text-black transition-colors">
+                <i class="fa-solid fa-music"></i>
+              </div>
+              <h3 class="font-syne text-xl font-bold text-white group-hover:text-amber-400 transition-colors">Music Videos & Visual Arts</h3>
+              <p class="text-zinc-400 text-sm leading-relaxed">
+                Indie artists, hip-hop music videos, and conceptual visual art. Dramatic lighting, anamorphic flares, stylized smoke, and energetic editing rhythms.
+              </p>
+              <ul class="text-xs text-zinc-300 space-y-2 pt-2 border-t border-zinc-800">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> RGB Ambiance & Haze Machine Effects</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Speed Ramping & VFX Transitions</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> YouTube 4K & Vertical Cut Mastery</li>
+              </ul>
+              <div class="pt-4 flex items-center justify-between">
+                <span class="text-xs text-amber-400/90 font-mono">Custom Quotes</span>
+                <a href="#book-slot" class="text-xs font-bold text-white hover:text-amber-400 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                  Inquire Now <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PORTFOLIO / GALLERY WITH CATEGORY FILTERS -->
+    <section id="portfolio" class="py-24 bg-zinc-950/70 border-t border-zinc-800/80 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div>
+            <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-amber-400 mb-3">
+              <span class="w-2 h-0.5 bg-amber-400"></span>
+              Selected Works
+            </div>
+            <h2 class="font-syne text-3xl sm:text-4xl md:text-5xl font-extrabold text-white">
+              VISUAL REEL & PORTFOLIO
+            </h2>
+          </div>
+
+          <!-- Category Filter Tabs -->
+          <div class="flex flex-wrap gap-2" id="portfolioFilterContainer">
+            <button class="filter-btn active" data-filter="all">All Works</button>
+            <button class="filter-btn" data-filter="commercial">Commercial</button>
+            <button class="filter-btn" data-filter="fashion">Fashion</button>
+            <button class="filter-btn" data-filter="wedding">Pre-Wedding</button>
+            <button class="filter-btn" data-filter="podcast">Podcast</button>
+            <button class="filter-btn" data-filter="product">Product</button>
+          </div>
+        </div>
+
+        <!-- Portfolio Bento / Masonry Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolioGrid">
+          
+          <!-- Item 1: Fashion -->
+          <div class="portfolio-item group" data-category="fashion" data-title="Elysian Noir Editorial" data-type="Fashion Portrait" data-gear="Sony A7S III • 85mm f/1.4" data-img="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=80">
+            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80" alt="Elysian Noir Editorial" class="portfolio-img">
+            <div class="portfolio-overlay">
+              <span class="category-pill">Fashion</span>
+              <h3 class="portfolio-title">Elysian Noir Editorial</h3>
+              <p class="portfolio-meta"><i class="fa-solid fa-camera mr-1"></i> Sony A7S III • 85mm GM</p>
+            </div>
+            <div class="zoom-icon"><i class="fa-solid fa-expand"></i></div>
+          </div>
+
+          <!-- Item 2: Commercial -->
+          <div class="portfolio-item group" data-category="commercial" data-title="Midnight Espresso Campaign" data-type="TVC / Commercial" data-gear="RED Komodo 6K • Cooke Anamorphic" data-img="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1200&q=80">
+            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80" alt="Midnight Espresso Campaign" class="portfolio-img">
+            <div class="portfolio-overlay">
+              <span class="category-pill">Commercial</span>
+              <h3 class="portfolio-title">Midnight Espresso Brand Film</h3>
+              <p class="portfolio-meta"><i class="fa-solid fa-video mr-1"></i> 4K TVC • Commercial</p>
+            </div>
+            <div class="zoom-icon"><i class="fa-solid fa-expand"></i></div>
+          </div>
+
+          <!-- Item 3: Wedding -->
+          <div class="portfolio-item group" data-category="wedding" data-title="Himalayan Sunset Romance" data-type="Pre-Wedding Cinema" data-gear="Sony FX3 • DJI Ronin RS3 Pro" data-img="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1200&q=80">
+            <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80" alt="Himalayan Sunset Romance" class="portfolio-img">
+            <div class="portfolio-overlay">
+              <span class="category-pill">Pre-Wedding</span>
+              <h3 class="portfolio-title">Himalayan Sunset Vows</h3>
+              <p class="portfolio-meta"><i class="fa-solid fa-film mr-1"></i> Mussoorie Hills • 4K Film</p>
+            </div>
+            <div class="zoom-icon"><i class="fa-solid fa-expand"></i></div>
+          </div>
+
+          <!-- Item 4: Podcast -->
+          <div class="portfolio-item group" data-category="podcast" data-title="The Visionary Hour Ep. 24" data-type="Studio Podcast" data-gear="3x Sony FX30 • Shure SM7B" data-img="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=1200&q=80">
+            <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=800&q=80" alt="The Visionary Hour Podcast" class="portfolio-img">
+            <div class="portfolio-overlay">
+              <span class="category-pill">Podcast</span>
+              <h3 class="portfolio-title">The Visionary Hour Podcast</h3>
+              <p class="portfolio-meta"><i class="fa-solid fa-microphone mr-1"></i> Multi-Cam • Shure SM7B</p>
+            </div>
+            <div class="zoom-icon"><i class="fa-solid fa-expand"></i></div>
+          </div>
+
+          <!-- Item 5: Product -->
+          <div class="portfolio-item group" data-category="product" data-title="Chronos Chronograph Luxury Watch" data-type="Product Photography" data-gear="Macro 100mm • Focus Stacked" data-img="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=80">
+            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80" alt="Chronos Chronograph Luxury Watch" class="portfolio-img">
+            <div class="portfolio-overlay">
+              <span class="category-pill">Product</span>
+              <h3 class="portfolio-title">Chronos Luxury Timepiece</h3>
+              <p class="portfolio-meta"><i class="fa-solid fa-gem mr-1"></i> Macro Lens • E-Commerce</p>
+            </div>
+            <div class="zoom-icon"><i class="fa-solid fa-expand"></i></div>
+          </div>
+
+          <!-- Item 6: Fashion / Creative -->
+          <div class="portfolio-item group" data-category="fashion" data-title="Cyberpunk Neon Glow Series" data-type="Creative Studio" data-gear="Nanlite Pavotube RGB • FX3" data-img="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=1200&q=80">
+            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=80" alt="Cyberpunk Neon Glow Series" class="portfolio-img">
+            <div class="portfolio-overlay">
+              <span class="category-pill">Creative / Fashion</span>
+              <h3 class="portfolio-title">Neon Odyssey Concept</h3>
+              <p class="portfolio-meta"><i class="fa-solid fa-palette mr-1"></i> RGB Stage • Studio Shoot</p>
+            </div>
+            <div class="zoom-icon"><i class="fa-solid fa-expand"></i></div>
+          </div>
+
+        </div>
+
+        <!-- Instagram Feed Callout -->
+        <div class="mt-16 p-8 rounded-3xl bg-gradient-to-r from-zinc-900 via-zinc-900 to-amber-950/40 border border-zinc-800 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-amber-500 via-pink-500 to-purple-600 flex items-center justify-center text-white text-2xl shadow-lg shadow-pink-500/20">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+            <div>
+              <h3 class="font-syne text-xl font-bold text-white">Follow Our Daily BTS on Instagram</h3>
+              <p class="text-sm text-zinc-400">Join our creative journey: lighting setups, camera rigs & fresh drops @dreambytestudio.in</p>
+            </div>
+          </div>
+          <a href="https://www.instagram.com/dreambytestudio.in" target="_blank" rel="noopener noreferrer" class="btn-ghost border border-amber-500/30 hover:border-amber-400 px-6 py-3 rounded-full font-semibold text-sm text-white flex items-center gap-2 group whitespace-nowrap">
+            <span>Explore Instagram Profile</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-amber-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BEFORE / AFTER COLOR GRADING INTERACTIVE SLIDER -->
+    <section id="color-grading" class="py-24 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-amber-400">
+            <span class="w-2 h-0.5 bg-amber-400"></span>
+            Post-Production Artistry
+            <span class="w-2 h-0.5 bg-amber-400"></span>
+          </div>
+          <h2 class="font-syne text-3xl sm:text-4xl md:text-5xl font-extrabold text-white">
+            FROM FLAT S-LOG RAW <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-orange-400">
+              TO CINEMA MASTERPIECE
+            </span>
+          </h2>
+          <p class="text-zinc-400 text-sm">
+            Drag the slider to reveal how our DaVinci Resolve colorists transform flat camera profiles into rich, emotive cinematic color palettes.
+          </p>
+        </div>
+
+        <!-- Interactive Comparison Container -->
+        <div class="relative max-w-4xl mx-auto aspect-[16/9] rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl select-none" id="comparisonSlider">
+          
+          <!-- After Image (Graded) - Full Background -->
+          <img 
+            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1600&q=80" 
+            alt="DreamByte Final Cinematic Color Grade" 
+            class="absolute inset-0 w-full h-full object-cover filter contrast-110 saturate-125"
+          >
+          <div class="badge-graded absolute top-6 right-6 px-3.5 py-1.5 rounded-full bg-amber-400 text-black text-xs font-bold uppercase tracking-wider shadow-lg flex items-center gap-1.5 z-10">
+            <i class="fa-solid fa-palette"></i> Final Cinema Grade
+          </div>
+
+          <!-- Before Image (S-Log RAW) - Clipped -->
+          <div class="comparison-before-container" id="beforeClip">
+            <img 
+              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1600&q=80" 
+              alt="Flat S-LOG RAW Profile" 
+              class="comparison-before-img filter brightness-110 contrast-50 grayscale-40"
+            >
+            <div class="badge-raw absolute top-6 left-6 px-3.5 py-1.5 rounded-full bg-zinc-900/90 border border-zinc-700 text-zinc-300 text-xs font-bold uppercase tracking-wider shadow-lg flex items-center gap-1.5 z-10">
+              <i class="fa-solid fa-camera"></i> Sony S-Log3 RAW
+            </div>
+          </div>
+
+          <!-- Divider Handle -->
+          <div class="comparison-handle" id="sliderHandle">
+            <div class="handle-line"></div>
+            <div class="handle-button">
+              <i class="fa-solid fa-arrows-left-right text-black text-xs"></i>
+            </div>
+            <div class="handle-line"></div>
+          </div>
+
+        </div>
+
+        <div class="flex items-center justify-center gap-6 mt-6 text-xs text-zinc-400">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> ACES Color Managed Workflow</span>
+          <span class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Skin Tone Preservation</span>
+          <span class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Custom LUT Generation</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- STUDIO SPACE & EQUIPMENT SHOWCASE -->
+    <section id="studio-space" class="py-24 bg-zinc-950/60 border-t border-zinc-800/80 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-5 space-y-6">
+            <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-amber-400">
+              <span class="w-2 h-0.5 bg-amber-400"></span>
+              Studio Floor & Production Gear
+            </div>
+            <h2 class="font-syne text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight">
+              STATE-OF-THE-ART GEAR FOR UNCOMPROMISED ART
+            </h2>
+            <p class="text-zinc-400 text-sm leading-relaxed">
+              Located on Sahastradhara Road, Dehradun, DreamByte Studio features a sound-treated shooting bay, motorized backdrop setups, professional makeup vanities, and cinema-grade lighting grids.
+            </p>
+
+            <div class="space-y-4 pt-2">
+              <div class="flex items-start gap-4 p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-amber-500/30 transition-colors">
+                <div class="w-10 h-10 rounded-xl bg-amber-400/10 text-amber-400 flex items-center justify-center shrink-0">
+                  <i class="fa-solid fa-vector-square text-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-syne font-bold text-white text-base">Cyclorama Infinity Cove & Motorized Backdrops</h3>
+                  <p class="text-xs text-zinc-400 mt-1">Seamless white, black, chroma green, and 12+ vibrant Savage paper backdrops.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-amber-500/30 transition-colors">
+                <div class="w-10 h-10 rounded-xl bg-amber-400/10 text-amber-400 flex items-center justify-center shrink-0">
+                  <i class="fa-solid fa-lightbulb text-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-syne font-bold text-white text-base">Aputure & Nanlite Cinema Lighting Grid</h3>
+                  <p class="text-xs text-zinc-400 mt-1">Aputure 600d Pro, 300x, motorized softboxes, and Nanlite Pavotube II RGB tubes with Sidus Link control.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800 hover:border-amber-500/30 transition-colors">
+                <div class="w-10 h-10 rounded-xl bg-amber-400/10 text-amber-400 flex items-center justify-center shrink-0">
+                  <i class="fa-solid fa-headphones text-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-syne font-bold text-white text-base">Sound-Isolated Podcast & Talk Show Lounge</h3>
+                  <p class="text-xs text-zinc-400 mt-1">Studio acoustic panels, Shure SM7B broadcast microphones, and 4K multi-cam live-switching consoles.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4">
+              <a href="#book-slot" class="btn-primary inline-flex items-center gap-2 px-6 py-3 rounded-full font-bold text-sm text-amber-950">
+                <i class="fa-solid fa-door-open"></i> Reserve Studio Space
+              </a>
+            </div>
+
+          </div>
+
+          <div class="lg:col-span-7">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="space-y-4">
+                <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-[4/5] relative group">
+                  <img src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?auto=format&fit=crop&w=800&q=80" alt="Studio Lighting Rig" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  <div class="absolute bottom-3 left-3 px-3 py-1 bg-black/70 backdrop-blur-md rounded-lg text-[11px] font-bold text-amber-400">Lighting Grid</div>
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-square relative group">
+                  <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80" alt="Cinema Camera Line" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  <div class="absolute bottom-3 left-3 px-3 py-1 bg-black/70 backdrop-blur-md rounded-lg text-[11px] font-bold text-amber-400">Sony Cinema Line</div>
+                </div>
+              </div>
+              <div class="space-y-4 pt-8">
+                <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-square relative group">
+                  <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800&q=80" alt="Podcast Lounge" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  <div class="absolute bottom-3 left-3 px-3 py-1 bg-black/70 backdrop-blur-md rounded-lg text-[11px] font-bold text-amber-400">Podcast Desk</div>
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-[4/5] relative group">
+                  <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80" alt="Outdoor Location Scouting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  <div class="absolute bottom-3 left-3 px-3 py-1 bg-black/70 backdrop-blur-md rounded-lg text-[11px] font-bold text-amber-400">Himalayan Outdoor Unit</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTERACTIVE SLOT BOOKING SYSTEM -->
+    <section id="book-slot" class="py-24 relative overflow-hidden">
+      <!-- Background Ambient Glow -->
+      <div class="absolute -right-40 top-1/2 -translate-y-1/2 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-amber-400">
+            <span class="w-2 h-0.5 bg-amber-400"></span>
+            Seamless Online Reservation
+            <span class="w-2 h-0.5 bg-amber-400"></span>
+          </div>
+          <h2 class="font-syne text-3xl sm:text-4xl md:text-5xl font-extrabold text-white">
+            BOOK YOUR STUDIO SLOT
+          </h2>
+          <p class="text-zinc-400 text-sm">
+            Select your preferred shoot type, pick an available calendar slot, customize your add-ons, and get immediate booking confirmation via WhatsApp or phone.
+          </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto bg-zinc-900/90 border border-zinc-800 rounded-3xl p-6 sm:p-10 shadow-2xl backdrop-blur-xl">
+          
+          <form id="bookingForm" class="space-y-8">
+            
+            <!-- STEP 1: SELECT SERVICE -->
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <span class="w-7 h-7 rounded-full bg-amber-400 text-black text-xs font-bold flex items-center justify-center">1</span>
+                <h3 class="font-syne text-lg font-bold text-white">Select Production Service</h3>
+              </div>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-3" id="serviceOptions">
+                <label class="service-radio-card active">
+                  <input type="radio" name="service" value="commercial" data-rate="15000" checked class="hidden">
+                  <i class="fa-solid fa-video text-xl text-amber-400 mb-2"></i>
+                  <span class="font-bold text-sm text-white">Commercial Video</span>
+                  <span class="text-[11px] text-zinc-400 mt-0.5">Est. ₹15,000+</span>
+                </label>
+
+                <label class="service-radio-card">
+                  <input type="radio" name="service" value="fashion" data-rate="8000" class="hidden">
+                  <i class="fa-solid fa-camera-retro text-xl text-amber-400 mb-2"></i>
+                  <span class="font-bold text-sm text-white">Fashion / Editorial</span>
+                  <span class="text-[11px] text-zinc-400 mt-0.5">Est. ₹8,000+</span>
+                </label>
+
+                <label class="service-radio-card">
+                  <input type="radio" name="service" value="podcast" data-rate="2500" class="hidden">
+                  <i class="fa-solid fa-microphone-lines text-xl text-amber-400 mb-2"></i>
+                  <span class="font-bold text-sm text-white">Podcast Studio</span>
+                  <span class="text-[11px] text-zinc-400 mt-0.5">₹2,500 / hr</span>
+                </label>
+
+                <label class="service-radio-card">
+                  <input type="radio" name="service" value="wedding" data-rate="35000" class="hidden">
+                  <i class="fa-solid fa-heart text-xl text-amber-400 mb-2"></i>
+                  <span class="font-bold text-sm text-white">Pre-Wedding Cinema</span>
+                  <span class="text-[11px] text-zinc-400 mt-0.5">Est. ₹35,000+</span>
+                </label>
+
+                <label class="service-radio-card">
+                  <input type="radio" name="service" value="product" data-rate="5000" class="hidden">
+                  <i class="fa-solid fa-box-open text-xl text-amber-400 mb-2"></i>
+                  <span class="font-bold text-sm text-white">Product Shoot</span>
+                  <span class="text-[11px] text-zinc-400 mt-0.5">Est. ₹5,000+</span>
+                </label>
+
+                <label class="service-radio-card">
+                  <input type="radio" name="service" value="rental" data-rate="2000" class="hidden">
+                  <i class="fa-solid fa-door-open text-xl text-amber-400 mb-2"></i>
+                  <span class="font-bold text-sm text-white">Studio Space Only</span>
+                  <span class="text-[11px] text-zinc-400 mt-0.5">₹2,000 / hr</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- STEP 2: DATE & TIME SLOT -->
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <span class="w-7 h-7 rounded-full bg-amber-400 text-black text-xs font-bold flex items-center justify-center">2</span>
+                <h3 class="font-syne text-lg font-bold text-white">Choose Date & Preferred Time Slot</h3>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+                <div class="md:col-span-5">
+                  <label class="block text-xs font-semibold uppercase text-zinc-400 mb-2">Shoot Date</label>
+                  <input 
+                    type="date" 
+                    id="bookingDate" 
+                    required 
+                    class="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-amber-400 font-sans"
+                  >
+                  <span class="text-[11px] text-zinc-400 mt-1 block">Live availability sync enabled</span>
+                </div>
+
+                <div class="md:col-span-7">
+                  <label class="block text-xs font-semibold uppercase text-zinc-400 mb-2">Select Time Window</label>
+                  <div class="grid grid-cols-2 gap-2" id="slotSelector">
+                    <button type="button" class="time-slot-btn active" data-slot="Morning (09:00 AM - 01:00 PM)">
+                      <i class="fa-regular fa-sun text-amber-400 mr-1.5"></i> Morning (9 AM - 1 PM)
+                    </button>
+                    <button type="button" class="time-slot-btn" data-slot="Afternoon (01:30 PM - 05:30 PM)">
+                      <i class="fa-solid fa-sun text-amber-400 mr-1.5"></i> Afternoon (1:30 - 5:30 PM)
+                    </button>
+                    <button type="button" class="time-slot-btn" data-slot="Golden Hour / Dusk (04:30 PM - 08:30 PM)">
+                      <i class="fa-solid fa-mountain-sun text-orange-400 mr-1.5"></i> Golden Hour (4:30 - 8:30 PM)
+                    </button>
+                    <button type="button" class="time-slot-btn" data-slot="Night Studio (08:30 PM - 12:30 AM)">
+                      <i class="fa-solid fa-moon text-indigo-400 mr-1.5"></i> Night Studio (8:30 PM+)
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 3: OPTIONAL ADD-ONS -->
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <span class="w-7 h-7 rounded-full bg-amber-400 text-black text-xs font-bold flex items-center justify-center">3</span>
+                <h3 class="font-syne text-lg font-bold text-white">Customize Add-Ons & Tech Specs</h3>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                <label class="addon-checkbox-card">
+                  <input type="checkbox" name="addons" value="drone" data-price="4000" class="accent-amber-400 w-4 h-4">
+                  <div class="text-left">
+                    <span class="font-bold text-xs text-white block">4K Drone Pilot</span>
+                    <span class="text-[11px] text-zinc-400">+ ₹4,000</span>
+                  </div>
+                </label>
+
+                <label class="addon-checkbox-card">
+                  <input type="checkbox" name="addons" value="fast-edit" data-price="3000" class="accent-amber-400 w-4 h-4">
+                  <div class="text-left">
+                    <span class="font-bold text-xs text-white block">24-Hr Express Edit</span>
+                    <span class="text-[11px] text-zinc-400">+ ₹3,000</span>
+                  </div>
+                </label>
+
+                <label class="addon-checkbox-card">
+                  <input type="checkbox" name="addons" value="makeup" data-price="4500" class="accent-amber-400 w-4 h-4">
+                  <div class="text-left">
+                    <span class="font-bold text-xs text-white block">Pro MUA / Hair Stylist</span>
+                    <span class="text-[11px] text-zinc-400">+ ₹4,500</span>
+                  </div>
+                </label>
+
+                <label class="addon-checkbox-card">
+                  <input type="checkbox" name="addons" value="reels" data-price="2500" class="accent-amber-400 w-4 h-4">
+                  <div class="text-left">
+                    <span class="font-bold text-xs text-white block">3x IG Reels Cut</span>
+                    <span class="text-[11px] text-zinc-400">+ ₹2,500</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- STEP 4: CONTACT & ESTIMATE -->
+            <div class="space-y-4 pt-4 border-t border-zinc-800">
+              <div class="flex items-center gap-3">
+                <span class="w-7 h-7 rounded-full bg-amber-400 text-black text-xs font-bold flex items-center justify-center">4</span>
+                <h3 class="font-syne text-lg font-bold text-white">Your Contact Details</h3>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold uppercase text-zinc-400 mb-2">Full Name *</label>
+                  <input type="text" id="clientName" required placeholder="e.g. Rahul Sharma" class="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-400 text-sm">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold uppercase text-zinc-400 mb-2">WhatsApp Number *</label>
+                  <input type="tel" id="clientPhone" required placeholder="e.g. +91 98765 43210" class="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-400 text-sm">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold uppercase text-zinc-400 mb-2">Email Address</label>
+                  <input type="email" id="clientEmail" placeholder="e.g. rahul@example.com" class="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-400 text-sm">
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold uppercase text-zinc-400 mb-2">Project Brief & Vision Notes (Optional)</label>
+                <textarea id="clientNotes" rows="2" placeholder="Tell us about your brand, vibe, preferred references, or questions..." class="w-full bg-zinc-950 border border-zinc-700 rounded-xl p-4 text-white focus:outline-none focus:border-amber-400 text-sm"></textarea>
+              </div>
+            </div>
+
+            <!-- PRICE SUMMARY & BOOKING SUBMISSION -->
+            <div class="p-6 rounded-2xl bg-zinc-950 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-6">
+              <div>
+                <p class="text-xs uppercase tracking-wider text-zinc-400">Estimated Total (Before Custom Adjustments)</p>
+                <div class="flex items-baseline gap-2 mt-1">
+                  <span class="font-syne text-3xl font-extrabold text-amber-400" id="estimatedPrice">₹15,000</span>
+                  <span class="text-xs text-zinc-400">+ GST as applicable</span>
+                </div>
+                <p class="text-[11px] text-emerald-400 mt-1 flex items-center gap-1">
+                  <i class="fa-solid fa-shield-halved"></i> 100% Date Reservation Guarantee
+                </p>
+              </div>
+
+              <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+                <button type="submit" class="btn-primary px-8 py-4 rounded-xl font-bold text-amber-950 flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40">
+                  <i class="fa-brands fa-whatsapp text-lg"></i>
+                  <span>Confirm Slot via WhatsApp</span>
+                </button>
+              </div>
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 bg-zinc-950/70 border-t border-zinc-800/80 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-6 relative">
+            <div class="relative mx-auto max-w-lg">
+              <div class="absolute -inset-2 bg-gradient-to-r from-amber-500 to-orange-600 rounded-3xl blur-xl opacity-30"></div>
+              <div class="relative rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80" 
+                  alt="DreamByte Studio Team & Creative Directors" 
+                  class="w-full h-full object-cover filter contrast-105"
+                >
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-black/70 backdrop-blur-md border border-white/10">
+                  <p class="font-syne font-bold text-white text-base">"Every frame should evoke emotion, every story must leave an imprint."</p>
+                  <p class="text-xs text-amber-400 mt-1">— The DreamByte Creative Vision</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 space-y-6">
+            <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-amber-400">
+              <span class="w-2 h-0.5 bg-amber-400"></span>
+              Behind the Lens
+            </div>
+            <h2 class="font-syne text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight">
+              WHERE PASSION MEETS CINEMATIC RIGOR
+            </h2>
+            <p class="text-zinc-300 text-base leading-relaxed">
+              Founded under the creative umbrella of <strong>DreamByte Solutions</strong> in Dehradun, <strong>DreamByte Studio</strong> was established with a singular mission: to eliminate mediocre visuals and deliver world-class cinema standards to regional and international brands alike.
+            </p>
+            <p class="text-zinc-400 text-sm leading-relaxed">
+              From our flagship studio space on Sahastradhara Road to rugged on-location shoots across Uttarakhand’s most stunning ridges and rivers, our crew of cinematographers, lighting technicians, sound engineers, and colorists bring relentless dedication to each frame.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4 pt-4 border-t border-zinc-800">
+              <div class="space-y-1">
+                <h4 class="font-syne font-bold text-white text-lg flex items-center gap-2">
+                  <i class="fa-solid fa-clapperboard text-amber-400 text-sm"></i> In-House Post
+                </h4>
+                <p class="text-xs text-zinc-400">Dedicated editing suites with DaVinci Resolve color calibration & Dolby sound mixing.</p>
+              </div>
+
+              <div class="space-y-1">
+                <h4 class="font-syne font-bold text-white text-lg flex items-center gap-2">
+                  <i class="fa-solid fa-mountain text-amber-400 text-sm"></i> Scenic Production
+                </h4>
+                <p class="text-xs text-zinc-400">Direct permits & location expertise across Mussoorie, Dhanaulti, Rishikesh & Doon valley.</p>
+              </div>
+            </div>
+
+            <div class="pt-4 flex flex-wrap items-center gap-4">
+              <a href="#services" class="btn-secondary px-6 py-3 rounded-full text-sm font-semibold">
+                Explore Studio Capabilities
+              </a>
+              <a href="https://www.instagram.com/dreambytestudio.in" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-amber-400 hover:text-white flex items-center gap-2">
+                <i class="fa-brands fa-instagram text-base"></i> View Instagram Journey
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS / REVIEWS -->
+    <section id="reviews" class="py-24 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-amber-400">
+            <span class="w-2 h-0.5 bg-amber-400"></span>
+            Real Stories, Real Trust
+            <span class="w-2 h-0.5 bg-amber-400"></span>
+          </div>
+          <h2 class="font-syne text-3xl sm:text-4xl md:text-5xl font-extrabold text-white">
+            WORDS FROM OUR CLIENTS
+          </h2>
+          <p class="text-zinc-400 text-sm">
+            Read what brands, entrepreneurs, and newlyweds say about working with DreamByte Studio.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <div class="testimonial-card">
+            <div class="flex items-center gap-1 text-amber-400 text-sm mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+              "We booked DreamByte for our luxury apparel ad campaign in Dehradun. The lighting setups, camera movement, and final color grade were leagues ahead of anything we’ve experienced in the region. Incredible team!"
+            </p>
+            <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+              <div class="w-10 h-10 rounded-full bg-amber-400/20 text-amber-400 flex items-center justify-center font-bold font-syne">
+                AK
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-white">Aman Kapoor</h4>
+                <p class="text-xs text-zinc-400">Founder, Urban Threads Apparel</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="flex items-center gap-1 text-amber-400 text-sm mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+              "Their podcast studio setup is truly world class. We walked in with just our topic notes, and they had four broadcast mics and 3-angle 4K cameras synchronized ready to record. Handed us polished clips in 48 hours."
+            </p>
+            <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+              <div class="w-10 h-10 rounded-full bg-amber-400/20 text-amber-400 flex items-center justify-center font-bold font-syne">
+                PS
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-white">Priya Sharma</h4>
+                <p class="text-xs text-zinc-400">Host, Founders Unfiltered Show</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="flex items-center gap-1 text-amber-400 text-sm mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+              "Our pre-wedding shoot in Dhanaulti and Rishikesh felt like a Bollywood cinema production. The drone shots, poetic pacing, and the cinematic song edit made our entire family cry happy tears. Highly recommend!"
+            </p>
+            <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+              <div class="w-10 h-10 rounded-full bg-amber-400/20 text-amber-400 flex items-center justify-center font-bold font-syne">
+                RN
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-white">Rohan & Naina</h4>
+                <p class="text-xs text-zinc-400">Pre-Wedding Cinema Clients</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-24 bg-zinc-950/60 border-t border-zinc-800/80 relative">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-16 space-y-3">
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-amber-400">
+            <span class="w-2 h-0.5 bg-amber-400"></span>
+            Got Questions?
+            <span class="w-2 h-0.5 bg-amber-400"></span>
+          </div>
+          <h2 class="font-syne text-3xl sm:text-4xl md:text-5xl font-extrabold text-white">
+            FREQUENTLY ASKED QUESTIONS
+          </h2>
+          <p class="text-zinc-400 text-sm">
+            Everything you need to know about booking, deliverables, and production policies.
+          </p>
+        </div>
+
+        <div class="space-y-4" id="faqAccordion">
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Where is DreamByte Studio located and how do I visit?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Our production studio is located at <strong>3rd Floor, Above Bank of India, Sahastradhara Road, Near IT Park, Dehradun, Uttarakhand - 248001</strong>. You are welcome to visit for studio walkthroughs or consultations; we recommend booking a slot or calling ahead at +91 82797 20490 so our creative director is available for you.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What is the turnaround time for receiving our final photos and videos?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-answer">
+              <p>For standard photography and lookbooks, initial color-corrected proofs are delivered within 48 to 72 hours, with final retouching delivered within 5 to 7 business days. For video commercial projects, the first director's cut is ready within 5-7 days. We also offer <strong>24-Hour Express Delivery</strong> as an add-on option.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can we rent just the podcast studio or shooting bay with our own equipment?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! We offer hourly and day-rate studio rentals for photographers, podcasters, and filmmakers who wish to bring their own gear or use our in-house lighting grids and sound-treated podcast suite. Our studio assistant is always on hand to assist with lighting adjustments.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Do you provide raw footage / RAW photos?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Upon request, unedited high-resolution RAW camera stills (CR3/ARW) and S-Log video files can be transferred to your portable SSD drive or uploaded via private secure cloud link without additional compression.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What is the advance booking and cancellation policy?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-answer">
+              <p>To lock your date and crew, a 30% advance is required upon booking confirmation. Date reschedules are allowed free of charge with at least 48 hours prior notice.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LOCATION & MAP CONTACT BANNER -->
+    <section class="py-20 border-t border-zinc-800 bg-zinc-950 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-zinc-900/80 rounded-3xl p-8 border border-zinc-800">
+          
+          <div class="lg:col-span-6 space-y-4">
+            <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-amber-400">
+              <i class="fa-solid fa-location-dot"></i> Visit Us In Person
+            </div>
+            <h3 class="font-syne text-2xl sm:text-3xl font-extrabold text-white">
+              DREAMBYTE STUDIO DEHRADUN
+            </h3>
+            <p class="text-zinc-300 text-sm leading-relaxed">
+              3rd Floor, Above Bank of India, Sahastradhara Road, Near IT Park, Dehradun, Uttarakhand - 248001
+            </p>
+            
+            <div class="pt-2 flex flex-col sm:flex-row gap-4 text-sm text-zinc-300">
+              <a href="tel:+918279720490" class="flex items-center gap-2 hover:text-amber-400">
+                <i class="fa-solid fa-phone text-amber-400"></i> +91 82797 20490
+              </a>
+              <a href="tel:+919258332639" class="flex items-center gap-2 hover:text-amber-400">
+                <i class="fa-solid fa-phone text-amber-400"></i> +91 92583 32639
+              </a>
+              <a href="mailto:contact@dreambytestudio.in" class="flex items-center gap-2 hover:text-amber-400">
+                <i class="fa-solid fa-envelope text-amber-400"></i> contact@dreambytestudio.in
+              </a>
+            </div>
+
+            <div class="pt-4 flex items-center gap-4">
+              <a href="https://maps.google.com/?q=Sahastradhara+Road+IT+Park+Dehradun" target="_blank" rel="noopener noreferrer" class="btn-primary px-6 py-3 rounded-xl font-bold text-xs text-amber-950 flex items-center gap-2">
+                <i class="fa-solid fa-diamond-turn-right"></i> Open in Google Maps
+              </a>
+              <a href="https://www.instagram.com/dreambytestudio.in" target="_blank" rel="noopener noreferrer" class="btn-ghost px-5 py-3 rounded-xl text-xs font-semibold flex items-center gap-2 text-pink-400">
+                <i class="fa-brands fa-instagram text-base"></i> @dreambytestudio.in
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 rounded-2xl overflow-hidden border border-zinc-800 aspect-[16/9] relative group">
+            <iframe 
+              title="DreamByte Studio Location Map" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27546.70295112108!2d78.070000!3d30.345000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3909299446e55555%3A0x123456789abcdef!2sSahastradhara%20Rd%2C%20Dehradun%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin" 
+              class="w-full h-full border-0 filter invert contrast-125 opacity-80 group-hover:opacity-100 transition-opacity" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div class="absolute top-3 left-3 px-3 py-1 bg-black/80 backdrop-blur-md rounded-md text-xs font-bold text-amber-400 border border-zinc-700">
+              <i class="fa-solid fa-building mr-1"></i> Sahastradhara Road Hub
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-black border-t border-zinc-900 py-16 text-zinc-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        
+        <!-- Col 1: Brand & Bio -->
+        <div class="space-y-4 md:col-span-1">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg bg-amber-400 flex items-center justify-center text-black font-extrabold text-sm">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <span class="font-syne font-extrabold text-lg text-white">DREAMBYTE <span class="text-amber-400">STUDIO</span></span>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            Cinema-grade visual production house and sound-isolated podcast studio based in Dehradun, Uttarakhand.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://www.instagram.com/dreambytestudio.in" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-pink-400 hover:border-pink-500/50 transition-colors" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/918279720490" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-emerald-400 hover:border-emerald-500/50 transition-colors" title="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://dreambytesolution.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-amber-400 hover:border-amber-500/50 transition-colors" title="Official Solution Site">
+              <i class="fa-solid fa-globe"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Services Quick Links -->
+        <div class="space-y-3">
+          <h4 class="font-syne font-bold text-white text-xs uppercase tracking-widest">Capabilities</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#services" class="hover:text-amber-400 transition-colors">Commercial & Brand Films</a></li>
+            <li><a href="#services" class="hover:text-amber-400 transition-colors">Fashion & Lookbooks</a></li>
+            <li><a href="#services" class="hover:text-amber-400 transition-colors">Podcast Multi-Cam Rental</a></li>
+            <li><a href="#services" class="hover:text-amber-400 transition-colors">Pre-Wedding Cinema</a></li>
+            <li><a href="#services" class="hover:text-amber-400 transition-colors">Product & E-Commerce Shoots</a></li>
+            <li><a href="#color-grading" class="hover:text-amber-400 transition-colors">DaVinci Color Grading</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Navigation -->
+        <div class="space-y-3">
+          <h4 class="font-syne font-bold text-white text-xs uppercase tracking-widest">Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#hero" class="hover:text-amber-400 transition-colors">Home Top</a></li>
+            <li><a href="#portfolio" class="hover:text-amber-400 transition-colors">Selected Portfolio</a></li>
+            <li><a href="#studio-space" class="hover:text-amber-400 transition-colors">Studio Floor & Gear</a></li>
+            <li><a href="#about" class="hover:text-amber-400 transition-colors">About Our Crew</a></li>
+            <li><a href="#book-slot" class="hover:text-amber-400 transition-colors">Book a Shoot Slot</a></li>
+            <li><a href="#faq" class="hover:text-amber-400 transition-colors">FAQ & Policies</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Quick Contact & Direct Booking -->
+        <div class="space-y-3">
+          <h4 class="font-syne font-bold text-white text-xs uppercase tracking-widest">Direct Desk</h4>
+          <p class="text-xs text-zinc-400">Need urgent dates or custom production logistics?</p>
+          <div class="space-y-1.5 text-xs">
+            <p class="text-white font-medium"><i class="fa-solid fa-phone text-amber-400 mr-2"></i> +91 82797 20490</p>
+            <p class="text-white font-medium"><i class="fa-solid fa-phone text-amber-400 mr-2"></i> +91 92583 32639</p>
+            <p class="text-zinc-400"><i class="fa-solid fa-envelope text-amber-400 mr-2"></i> info@dreambytesolution.com</p>
+            <p class="text-zinc-400"><i class="fa-solid fa-clock text-amber-400 mr-2"></i> Mon - Sun: 09:00 AM - 09:00 PM</p>
+          </div>
+          <div class="pt-2">
+            <a href="#book-slot" class="btn-primary block text-center py-2 px-4 rounded-lg font-bold text-xs text-amber-950">
+              Schedule Studio Slot Now
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-t border-zinc-900 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-400 gap-4">
+        <p>© 2026 DreamByte Studio (DreamByte Solutions). All rights reserved.</p>
+        <p class="flex items-center gap-1">
+          Designed with <span class="text-amber-400">♦</span> for Cinema & Artistry in Dehradun
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING QUICK WHATSAPP BUTTON -->
+  <a 
+    href="https://wa.me/918279720490?text=Hi%20DreamByte%20Studio,%20I'm%20looking%20to%20book%20a%20photoshoot%20or%20video%20production%20session." 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="floating-whatsapp group"
+    aria-label="Direct WhatsApp Chat"
+  >
+    <div class="whatsapp-pulse"></div>
+    <i class="fa-brands fa-whatsapp text-2xl"></i>
+    <span class="floating-tooltip">Chat with Studio Team</span>
+  </a>
+
+  <!-- LIGHTBOX / MEDIA MODAL -->
+  <div id="mediaModal" class="media-modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-content-wrapper">
+      <button id="modalCloseBtn" class="modal-close" aria-label="Close modal">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+
+      <div class="modal-body">
+        <div class="modal-image-holder">
+          <img id="modalImage" src="" alt="Portfolio work" class="modal-img">
+        </div>
+        <div class="modal-info-panel">
+          <span id="modalCategory" class="text-xs uppercase tracking-widest text-amber-400 font-bold">Category</span>
+          <h3 id="modalTitle" class="font-syne text-2xl font-bold text-white mt-1">Project Title</h3>
+          <p id="modalGear" class="text-xs text-zinc-400 mt-1"><i class="fa-solid fa-camera mr-1"></i> Gear Specs</p>
+          <p class="text-sm text-zinc-300 mt-4 leading-relaxed">
+            Shot & produced at DreamByte Studio. Color graded and master finished for digital and commercial broadcast distribution.
+          </p>
+          <div class="mt-6 pt-4 border-t border-zinc-800 flex items-center justify-between">
+            <a href="#book-slot" id="modalBookBtn" class="btn-primary text-xs px-5 py-2.5 rounded-full font-bold text-amber-950">
+              Inquire Similar Shoot
+            </a>
+            <a href="https://www.instagram.com/dreambytestudio.in" target="_blank" rel="noopener noreferrer" class="text-xs text-pink-400 hover:text-white flex items-center gap-1.5 font-semibold">
+              <i class="fa-brands fa-instagram"></i> View on Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHOWREEL VIDEO MODAL -->
+  <div id="showreelModal" class="media-modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" id="showreelBackdrop"></div>
+    <div class="modal-content-wrapper max-w-4xl">
+      <button id="showreelCloseBtn" class="modal-close" aria-label="Close video modal">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+      <div class="p-2 sm:p-4 bg-zinc-950 rounded-2xl border border-zinc-800">
+        <div class="aspect-video w-full rounded-xl overflow-hidden relative bg-black flex items-center justify-center">
+          <video 
+            id="showreelVideoPlayer"
+            class="w-full h-full object-cover" 
+            controls 
+            autoplay 
+            muted 
+            loop 
+            poster="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?auto=format&fit=crop&w=1600&q=80"
+          >
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+        <div class="p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>
+            <h4 class="font-syne font-bold text-white text-lg">DreamByte Studio • 2026 Director's Showreel</h4>
+            <p class="text-xs text-zinc-400">Captured on Sony FX3, FX6 & RED Cinema Systems in Dehradun & Uttarakhand.</p>
+          </div>
+          <a href="#book-slot" id="closeShowreelAndBook" class="btn-primary text-xs px-5 py-2.5 rounded-full font-bold text-amber-950 whitespace-nowrap">
+            Book a Production Slot
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toastNotification" class="toast-notification hidden">
+    <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+    <div class="text-xs">
+      <p id="toastTitle" class="font-bold text-white">Slot Reserved!</p>
+      <p id="toastMessage" class="text-zinc-300">Opening WhatsApp with your booking details...</p>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
