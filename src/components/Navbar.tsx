@@ -85,53 +85,53 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileOpen && (
-        <div className="md:hidden bg-zinc-950/98 border-b border-zinc-800 px-6 py-6 space-y-4">
+        <div className="md:hidden bg-zinc-950/98 border-b border-zinc-800 px-5 sm:px-6 py-6 space-y-4 max-h-[82vh] overflow-y-auto">
           <a
             href="#services"
             onClick={() => setMobileOpen(false)}
-            className="block text-base font-semibold text-zinc-200 hover:text-amber-400"
+            className="block text-base font-semibold text-zinc-200 hover:text-amber-400 py-1"
           >
             Services
           </a>
           <a
             href="#portfolio"
             onClick={() => setMobileOpen(false)}
-            className="block text-base font-semibold text-zinc-200 hover:text-amber-400"
+            className="block text-base font-semibold text-zinc-200 hover:text-amber-400 py-1"
           >
-            Portfolio & Films
+            Portfolio &amp; Films
           </a>
           <a
             href="#color-grading"
             onClick={() => setMobileOpen(false)}
-            className="block text-base font-semibold text-zinc-200 hover:text-amber-400"
+            className="block text-base font-semibold text-zinc-200 hover:text-amber-400 py-1"
           >
             RAW to Cinema (Before/After)
           </a>
           <a
             href="#studio-space"
             onClick={() => setMobileOpen(false)}
-            className="block text-base font-semibold text-zinc-200 hover:text-amber-400"
+            className="block text-base font-semibold text-zinc-200 hover:text-amber-400 py-1"
           >
-            Studio Floor & Gear
+            Studio Floor &amp; Gear
           </a>
           <a
             href="#about"
             onClick={() => setMobileOpen(false)}
-            className="block text-base font-semibold text-zinc-200 hover:text-amber-400"
+            className="block text-base font-semibold text-zinc-200 hover:text-amber-400 py-1"
           >
             About DreamByte
           </a>
           <a
             href="#reviews"
             onClick={() => setMobileOpen(false)}
-            className="block text-base font-semibold text-zinc-200 hover:text-amber-400"
+            className="block text-base font-semibold text-zinc-200 hover:text-amber-400 py-1"
           >
             Reviews
           </a>
           <a
             href="#faq"
             onClick={() => setMobileOpen(false)}
-            className="block text-base font-semibold text-zinc-200 hover:text-amber-400"
+            className="block text-base font-semibold text-zinc-200 hover:text-amber-400 py-1"
           >
             FAQ
           </a>
@@ -140,7 +140,7 @@ export default function Navbar() {
             <a
               href="#book-slot"
               onClick={() => setMobileOpen(false)}
-              className="btn-primary text-center py-3 rounded-xl font-bold text-amber-950"
+              className="btn-primary text-center py-3.5 rounded-xl font-bold text-amber-950"
             >
               Book Studio Slot
             </a>
@@ -148,10 +148,10 @@ export default function Navbar() {
               href="https://wa.me/918279720490"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-ghost border border-zinc-800 text-center py-3 rounded-xl text-emerald-400 flex items-center justify-center gap-2"
+              className="btn-ghost text-center py-3 rounded-xl font-medium text-sm text-zinc-300 flex items-center justify-center gap-2 border border-zinc-800"
             >
-              <MessageSquare className="w-4 h-4" />
-              WhatsApp Studio Desk
+              <MessageSquare className="w-4 h-4 text-emerald-400" />
+              <span>Direct WhatsApp Desk</span>
             </a>
           </div>
         </div>

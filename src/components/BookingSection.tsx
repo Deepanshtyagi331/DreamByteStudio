@@ -175,7 +175,7 @@ Please confirm crew and stage availability for this slot!`
 
                 <div className="md:col-span-7">
                   <label className="block text-xs font-semibold uppercase text-zinc-400 mb-2">Select Time Window</label>
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {timeSlots.map(slot => {
                       const Icon = slot.icon
                       const active = selectedSlot === slot.label
@@ -289,11 +289,11 @@ Please confirm crew and stage availability for this slot!`
             </div>
 
             {/* Price & Submit */}
-            <div className="p-6 rounded-2xl bg-zinc-950 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div className="p-5 sm:p-6 rounded-2xl bg-zinc-950 border border-amber-500/30 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-6">
               <div>
                 <p className="text-xs uppercase tracking-wider text-zinc-400">Estimated Total (Before Custom Adjustments)</p>
                 <div className="flex items-baseline gap-2 mt-1">
-                  <span className="font-syne text-3xl font-extrabold text-amber-400">
+                  <span className="font-syne text-2xl sm:text-3xl font-extrabold text-amber-400">
                     ₹{totalEstimate.toLocaleString('en-IN')}
                   </span>
                   <span className="text-xs text-zinc-400">+ GST as applicable</span>
@@ -305,7 +305,7 @@ Please confirm crew and stage availability for this slot!`
 
               <button
                 type="submit"
-                className="btn-primary px-8 py-4 rounded-xl font-bold text-amber-950 flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20"
+                className="btn-primary w-full sm:w-auto px-7 py-3.5 sm:py-4 rounded-xl font-bold text-amber-950 flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20 text-center"
               >
                 Confirm Slot via WhatsApp
               </button>

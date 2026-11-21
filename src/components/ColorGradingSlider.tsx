@@ -65,8 +65,11 @@ export default function ColorGradingSlider() {
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
           onMouseMove={handleMouseMove}
+          onTouchStart={(e) => {
+            if (e.touches[0]) handleMove(e.touches[0].clientX)
+          }}
           onTouchMove={handleTouchMove}
-          className="relative max-w-4xl mx-auto aspect-[16/9] rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl select-none cursor-ew-resize"
+          className="relative max-w-4xl mx-auto aspect-[4/3] sm:aspect-[16/9] rounded-2xl sm:rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl select-none cursor-ew-resize touch-none"
         >
           {/* Graded Frame (Full Background) */}
           <img
@@ -75,8 +78,8 @@ export default function ColorGradingSlider() {
             className="absolute inset-0 w-full h-full object-cover filter contrast-115 saturate-125 pointer-events-none"
           />
 
-          <div className="absolute top-6 right-6 px-3.5 py-1.5 rounded-full bg-amber-400 text-black text-xs font-bold uppercase tracking-wider shadow-lg flex items-center gap-1.5 z-10">
-            <Palette className="w-3.5 h-3.5" /> Final Cinema Grade
+          <div className="absolute top-3 right-3 sm:top-6 sm:right-6 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-amber-400 text-black text-[10px] sm:text-xs font-bold uppercase tracking-wider shadow-lg flex items-center gap-1.5 z-10">
+            <Palette className="w-3 sm:w-3.5 h-3 sm:h-3.5" /> Final Cinema Grade
           </div>
 
           {/* S-Log RAW Frame (Clipped) */}
@@ -91,8 +94,8 @@ export default function ColorGradingSlider() {
                 className="absolute inset-0 w-full h-full object-cover filter brightness-110 contrast-50 grayscale-40 pointer-events-none max-w-none"
               />
             </div>
-            <div className="absolute top-6 left-6 px-3.5 py-1.5 rounded-full bg-zinc-900/90 border border-zinc-700 text-zinc-300 text-xs font-bold uppercase tracking-wider shadow-lg flex items-center gap-1.5 z-10">
-              <Camera className="w-3.5 h-3.5 text-zinc-400" /> Sony S-Log3 RAW
+            <div className="absolute top-3 left-3 sm:top-6 sm:left-6 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-zinc-900/90 border border-zinc-700 text-zinc-300 text-[10px] sm:text-xs font-bold uppercase tracking-wider shadow-lg flex items-center gap-1.5 z-10">
+              <Camera className="w-3 sm:w-3.5 h-3 sm:h-3.5 text-zinc-400" /> Sony S-Log3 RAW
             </div>
           </div>
 
@@ -102,7 +105,7 @@ export default function ColorGradingSlider() {
             className="absolute top-0 bottom-0 -translate-x-1/2 w-10 flex flex-col items-center pointer-events-none z-20"
           >
             <div className="flex-1 w-0.5 bg-amber-400" />
-            <div className="w-9 h-9 rounded-full bg-amber-400 text-black flex items-center justify-center shadow-xl shadow-amber-500/70 pointer-events-auto cursor-grab active:cursor-grabbing">
+            <div className="w-8 sm:w-9 h-8 sm:h-9 rounded-full bg-amber-400 text-black flex items-center justify-center shadow-xl shadow-amber-500/70 pointer-events-auto cursor-grab active:cursor-grabbing">
               <MoveHorizontal className="w-4 h-4" />
             </div>
             <div className="flex-1 w-0.5 bg-amber-400" />

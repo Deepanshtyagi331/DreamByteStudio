@@ -6,11 +6,11 @@ export default function FloatingWhatsApp() {
       href="https://wa.me/918279720490?text=Hi%20DreamByte%20Studio,%20I'm%20looking%20to%20book%20a%20photoshoot%20or%20video%20production%20session."
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-[#25d366] text-white flex items-center justify-center shadow-2xl shadow-emerald-500/30 hover:scale-110 hover:rotate-6 transition-all group"
+      className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#25d366] text-white flex items-center justify-center shadow-2xl shadow-emerald-500/30 hover:scale-110 hover:rotate-6 transition-all group"
       aria-label="Direct WhatsApp Chat"
     >
       <div className="whatsapp-pulse" />
-      <MessageCircle className="w-7 h-7 fill-white" />
+      <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7 fill-white" />
       <span className="absolute right-16 bg-zinc-900 border border-zinc-700 text-white px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-xl">
         Chat with Studio Desk
       </span>

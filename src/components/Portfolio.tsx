@@ -89,7 +89,7 @@ export default function Portfolio() {
           </div>
 
           {/* Filter Pills */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex items-center gap-2 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap no-scrollbar">
             {[
               { key: 'all', label: 'All Works' },
               { key: 'commercial', label: 'Commercial' },
@@ -101,7 +101,7 @@ export default function Portfolio() {
               <button
                 key={tab.key}
                 onClick={() => setActiveFilter(tab.key as any)}
-                className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${
+                className={`px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap transition-all shrink-0 ${
                   activeFilter === tab.key
                     ? 'bg-amber-400 text-black shadow-lg shadow-amber-400/20'
                     : 'bg-white/5 border border-white/10 text-zinc-300 hover:text-white hover:border-white/20'
@@ -148,21 +148,21 @@ export default function Portfolio() {
         </div>
 
         {/* Instagram Profile Callout */}
-        <div className="mt-16 p-8 rounded-3xl bg-gradient-to-r from-zinc-900 via-zinc-900 to-amber-950/40 border border-zinc-800 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="mt-14 sm:mt-16 p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-r from-zinc-900 via-zinc-900 to-amber-950/40 border border-zinc-800 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-amber-500 via-pink-500 to-purple-600 flex items-center justify-center text-white shadow-lg shadow-pink-500/20">
-              <InstagramIcon className="w-7 h-7 text-white" />
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-tr from-amber-500 via-pink-500 to-purple-600 flex items-center justify-center text-white shadow-lg shadow-pink-500/20 shrink-0">
+              <InstagramIcon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
             </div>
             <div>
-              <h3 className="font-syne text-xl font-bold text-white">Follow Our Daily BTS on Instagram</h3>
-              <p className="text-sm text-zinc-400">Join our creative journey: lighting setups, camera rigs & fresh drops @dreambytestudio.in</p>
+              <h3 className="font-syne text-lg sm:text-xl font-bold text-white">Follow Our Daily BTS on Instagram</h3>
+              <p className="text-xs sm:text-sm text-zinc-400">Join our creative journey: lighting setups, camera rigs &amp; fresh drops @dreambytestudio.in</p>
             </div>
           </div>
           <a
             href="https://www.instagram.com/dreambytestudio.in"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-ghost border border-amber-500/30 hover:border-amber-400 px-6 py-3 rounded-full font-semibold text-sm text-white flex items-center gap-2 group whitespace-nowrap"
+            className="btn-ghost border border-amber-500/30 hover:border-amber-400 px-6 py-3 rounded-full font-semibold text-xs sm:text-sm text-white flex items-center justify-center gap-2 group whitespace-nowrap w-full sm:w-auto text-center"
           >
             <span>Explore Instagram Profile</span>
             <ArrowUpRight className="w-4 h-4 text-amber-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -173,16 +173,17 @@ export default function Portfolio() {
 
       {/* Lightbox Modal */}
       {selectedItem && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md">
-          <div className="relative max-w-4xl w-full bg-obsidian border border-amber-500/30 rounded-3xl overflow-hidden shadow-2xl grid grid-cols-1 md:grid-cols-12">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/85 backdrop-blur-md">
+          <div className="relative max-w-4xl w-full max-h-[92vh] overflow-y-auto bg-obsidian border border-amber-500/30 rounded-2xl sm:rounded-3xl shadow-2xl grid grid-cols-1 md:grid-cols-12">
             <button
               onClick={() => setSelectedItem(null)}
-              className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/70 text-white hover:bg-amber-400 hover:text-black flex items-center justify-center transition-colors"
+              className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black/75 text-white hover:bg-amber-400 hover:text-black flex items-center justify-center transition-colors"
+              aria-label="Close details"
             >
-              <X className="w-5 h-5" />
+              <X className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
 
-            <div className="md:col-span-7 bg-black flex items-center justify-center max-h-[500px] overflow-hidden">
+            <div className="md:col-span-7 bg-black flex items-center justify-center max-h-[300px] sm:max-h-[420px] md:max-h-[500px] overflow-hidden">
               <img
                 src={selectedItem.image}
                 alt={selectedItem.title}
@@ -190,25 +191,25 @@ export default function Portfolio() {
               />
             </div>
 
-            <div className="md:col-span-5 p-8 flex flex-col justify-center space-y-4">
-              <span className="text-xs uppercase tracking-widest text-amber-400 font-bold">
+            <div className="md:col-span-5 p-5 sm:p-8 flex flex-col justify-center space-y-3 sm:space-y-4">
+              <span className="text-[10px] sm:text-xs uppercase tracking-widest text-amber-400 font-bold">
                 {selectedItem.categoryLabel}
               </span>
-              <h3 className="font-syne text-2xl font-bold text-white">
+              <h3 className="font-syne text-xl sm:text-2xl font-bold text-white leading-tight">
                 {selectedItem.title}
               </h3>
               <p className="text-xs text-zinc-400 flex items-center gap-1.5">
-                <Camera className="w-4 h-4 text-amber-400" />
+                <Camera className="w-3.5 h-3.5 text-amber-400" />
                 {selectedItem.gear}
               </p>
-              <p className="text-sm text-zinc-300 leading-relaxed pt-2">
-                Shot & produced at DreamByte Studio. Color graded and master finished for digital and commercial broadcast distribution.
+              <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed pt-1 sm:pt-2">
+                Shot &amp; produced at DreamByte Studio. Color graded and master finished for digital and commercial broadcast distribution.
               </p>
-              <div className="pt-4 flex items-center gap-3">
+              <div className="pt-2 sm:pt-4 flex items-center gap-3">
                 <a
                   href="#book-slot"
                   onClick={() => setSelectedItem(null)}
-                  className="btn-primary text-xs px-5 py-2.5 rounded-full font-bold text-amber-950"
+                  className="btn-primary text-xs px-5 py-2.5 rounded-full font-bold text-amber-950 w-full sm:w-auto text-center"
                 >
                   Inquire Similar Shoot
                 </a>
