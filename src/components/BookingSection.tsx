@@ -1,7 +1,7 @@
 'use client'
 
-import { useState, useMemo } from 'react'
-import { Video, Camera, Mic, Heart, Package, DoorOpen, Sun, Moon, CloudSun, ShieldCheck, CheckCircle2 } from 'lucide-react'
+import { useState, useMemo, useRef, useEffect } from 'react'
+import { Video, Camera, Mic, Heart, Package, DoorOpen, Sun, Moon, CloudSun, ShieldCheck, CheckCircle2, Calendar, ChevronLeft, ChevronRight, ChevronDown, Sparkles } from 'lucide-react'
 
 interface ServiceOption {
   id: string
@@ -44,6 +44,79 @@ export default function BookingSection() {
   const [shootDate, setShootDate] = useState('')
   const [clientNotes, setClientNotes] = useState('')
   const [toastMessage, setToastMessage] = useState<string | null>(null)
+
+  // Custom Slide-Down Calendar State
+  const [isCalendarOpen, setIsCalendarOpen] = useState(false)
+  const [calendarMonth, setCalendarMonth] = useState(new Date())
+  const calendarRef = useRef<HTMLDivElement>(null)
+
+  // Close calendar when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (calendarRef.current && !calendarRef.current.contains(event.target as Node)) {
+        setIsCalendarOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
+
+  const monthNames = [
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'
+  ]
+  const weekDays = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa']
+
+  const calYear = calendarMonth.getFullYear()
+  const calMonthIdx = calendarMonth.getMonth()
+  const daysInCurrentMonth = new Date(calYear, calMonthIdx + 1, 0).getDate()
+  const firstDayOfMonthIndex = new Date(calYear, calMonthIdx, 1).getDay()
+
+  const handlePrevMonth = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    const today = new Date()
+    if (calYear === today.getFullYear() && calMonthIdx <= today.getMonth()) return
+    setCalendarMonth(new Date(calYear, calMonthIdx - 1, 1))
+  }
+
+  const handleNextMonth = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    setCalendarMonth(new Date(calYear, calMonthIdx + 1, 1))
+  }
+
+  const handleDateClick = (day: number) => {
+    const m = String(calMonthIdx + 1).padStart(2, '0')
+    const d = String(day).padStart(2, '0')
+    setShootDate(`${calYear}-${m}-${d}`)
+    setIsCalendarOpen(false)
+  }
+
+  const handleQuickPreset = (daysOffset: number) => {
+    const target = new Date()
+    target.setDate(target.getDate() + daysOffset)
+    const y = target.getFullYear()
+    const m = String(target.getMonth() + 1).padStart(2, '0')
+    const d = String(target.getDate()).padStart(2, '0')
+    setShootDate(`${y}-${m}-${d}`)
+    setCalendarMonth(target)
+    setIsCalendarOpen(false)
+  }
+
+  const formattedDateDisplay = useMemo(() => {
+    if (!shootDate) return 'Select Shoot Date'
+    try {
+      const [y, m, d] = shootDate.split('-').map(Number)
+      const dateObj = new Date(y, m - 1, d)
+      return dateObj.toLocaleDateString('en-IN', {
+        weekday: 'short',
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric'
+      })
+    } catch {
+      return shootDate
+    }
+  }, [shootDate])
 
   const currentService = servicesList.find(s => s.id === selectedService) || servicesList[0]
 
@@ -161,15 +234,163 @@ Please confirm crew and stage availability for this slot!`
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
-                <div className="md:col-span-5">
-                  <label className="block text-xs font-semibold uppercase text-zinc-400 mb-2">Shoot Date</label>
+                <div className="md:col-span-5 relative" ref={calendarRef}>
+                  <label className="block text-xs font-semibold uppercase text-zinc-400 mb-2">Shoot Date *</label>
+                  
+                  {/* Clickable Trigger Button */}
+                  <button
+                    type="button"
+                    onClick={() => setIsCalendarOpen(!isCalendarOpen)}
+                    className={`w-full bg-zinc-950 border rounded-xl px-4 py-3 text-left flex items-center justify-between text-sm transition-all group ${
+                      isCalendarOpen
+                        ? 'border-amber-400 shadow-xl shadow-amber-400/15 ring-1 ring-amber-400'
+                        : 'border-zinc-700 hover:border-zinc-500'
+                    }`}
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className={`w-8 h-8 rounded-lg flex items-center justify-center transition-colors shrink-0 ${
+                        shootDate ? 'bg-amber-400 text-black' : 'bg-amber-400/10 text-amber-400 group-hover:bg-amber-400/20'
+                      }`}>
+                        <Calendar className="w-4 h-4" />
+                      </div>
+                      <div className="truncate">
+                        <span className={`block font-medium text-sm leading-tight ${shootDate ? 'text-white font-bold' : 'text-zinc-400'}`}>
+                          {formattedDateDisplay}
+                        </span>
+                        <span className="text-[10px] text-zinc-500 font-mono">
+                          {shootDate ? 'Selected Slot Day' : 'Click to open calendar'}
+                        </span>
+                      </div>
+                    </div>
+                    <ChevronDown className={`w-4 h-4 text-zinc-400 transition-transform duration-300 ${isCalendarOpen ? 'rotate-180 text-amber-400' : ''}`} />
+                  </button>
+
+                  {/* Hidden form required validation input */}
                   <input
-                    type="date"
+                    type="text"
                     required
                     value={shootDate}
-                    onChange={e => setShootDate(e.target.value)}
-                    className="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-amber-400 text-sm"
+                    onChange={() => {}}
+                    className="sr-only"
+                    tabIndex={-1}
+                    aria-hidden="true"
                   />
+
+                  {/* Slide-Down Calendar Dropdown Container */}
+                  <div
+                    className={`transition-all duration-300 ease-out origin-top ${
+                      isCalendarOpen
+                        ? 'opacity-100 scale-y-100 translate-y-0 max-h-[500px] pointer-events-auto visible mt-2'
+                        : 'opacity-0 scale-y-95 -translate-y-2 max-h-0 pointer-events-none invisible overflow-hidden'
+                    } absolute z-50 top-full left-0 right-0 sm:w-[340px] bg-zinc-950/98 border border-amber-500/40 rounded-2xl p-4 shadow-2xl backdrop-blur-2xl`}
+                  >
+                    {/* Header: Month & Year Nav */}
+                    <div className="flex items-center justify-between pb-3 mb-3 border-b border-zinc-800">
+                      <button
+                        type="button"
+                        onClick={handlePrevMonth}
+                        className="w-7 h-7 rounded-lg bg-white/5 hover:bg-amber-400/20 text-zinc-400 hover:text-white flex items-center justify-center transition-colors"
+                        aria-label="Previous Month"
+                      >
+                        <ChevronLeft className="w-4 h-4" />
+                      </button>
+
+                      <div className="font-syne font-bold text-sm text-white">
+                        {monthNames[calMonthIdx]} <span className="text-amber-400">{calYear}</span>
+                      </div>
+
+                      <button
+                        type="button"
+                        onClick={handleNextMonth}
+                        className="w-7 h-7 rounded-lg bg-white/5 hover:bg-amber-400/20 text-zinc-400 hover:text-white flex items-center justify-center transition-colors"
+                        aria-label="Next Month"
+                      >
+                        <ChevronRight className="w-4 h-4" />
+                      </button>
+                    </div>
+
+                    {/* Weekday Labels */}
+                    <div className="grid grid-cols-7 gap-1 text-center mb-2">
+                      {weekDays.map((wd, i) => (
+                        <span key={i} className="text-[10px] font-bold text-zinc-500 uppercase font-mono">
+                          {wd}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Days Grid */}
+                    <div className="grid grid-cols-7 gap-1">
+                      {/* Leading Empty Cells */}
+                      {Array.from({ length: firstDayOfMonthIndex }).map((_, idx) => (
+                        <div key={`empty-${idx}`} className="w-8 h-8" />
+                      ))}
+
+                      {/* Day Number Buttons */}
+                      {Array.from({ length: daysInCurrentMonth }).map((_, idx) => {
+                        const day = idx + 1
+                        const today = new Date()
+                        today.setHours(0, 0, 0, 0)
+                        const thisDate = new Date(calYear, calMonthIdx, day)
+                        const isPast = thisDate < today
+                        const isToday = thisDate.getTime() === today.getTime()
+                        const dayStr = `${calYear}-${String(calMonthIdx + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`
+                        const isSelected = shootDate === dayStr
+
+                        return (
+                          <button
+                            type="button"
+                            key={`day-${day}`}
+                            disabled={isPast}
+                            onClick={() => handleDateClick(day)}
+                            className={`w-8 h-8 rounded-lg text-xs font-semibold flex flex-col items-center justify-center relative transition-all ${
+                              isPast
+                                ? 'text-zinc-600 opacity-30 cursor-not-allowed'
+                                : isSelected
+                                ? 'bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-black font-extrabold shadow-md shadow-amber-400/40 scale-105'
+                                : isToday
+                                ? 'border border-amber-400/60 text-amber-400 hover:bg-amber-400/20 font-bold'
+                                : 'text-zinc-300 hover:bg-white/10 hover:text-white'
+                            }`}
+                          >
+                            <span>{day}</span>
+                            {!isPast && !isSelected && (
+                              <span className="w-1 h-1 rounded-full bg-emerald-400/80 -mt-0.5" />
+                            )}
+                          </button>
+                        )
+                      })}
+                    </div>
+
+                    {/* Quick Presets Row */}
+                    <div className="mt-3 pt-3 border-t border-zinc-800 flex items-center justify-between text-[11px]">
+                      <span className="text-zinc-500 font-mono">Quick:</span>
+                      <div className="flex items-center gap-1.5">
+                        <button
+                          type="button"
+                          onClick={() => handleQuickPreset(0)}
+                          className="px-2 py-0.5 rounded-md bg-white/5 hover:bg-amber-400/20 text-zinc-300 hover:text-amber-400 text-[10px] font-semibold"
+                        >
+                          Today
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => handleQuickPreset(1)}
+                          className="px-2 py-0.5 rounded-md bg-white/5 hover:bg-amber-400/20 text-zinc-300 hover:text-amber-400 text-[10px] font-semibold"
+                        >
+                          Tomorrow
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => handleQuickPreset(3)}
+                          className="px-2 py-0.5 rounded-md bg-white/5 hover:bg-amber-400/20 text-zinc-300 hover:text-amber-400 text-[10px] font-semibold"
+                        >
+                          +3 Days
+                        </button>
+                      </div>
+                    </div>
+
+                  </div>
+
                   <span className="text-[11px] text-zinc-400 mt-1 block">Live availability sync enabled</span>
                 </div>
 
