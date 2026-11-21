@@ -167,7 +167,6 @@ export default function Hero({ onOpenShowreel }: HeroProps) {
                   src="/images/hero-model-crop.jpg"
                   alt="DreamByte Indian Bridal Luxury Editorial Model"
                   onError={(e) => {
-                    // Fallback to high-res traditional Indian bridal portrait if local crop is unavailable
                     e.currentTarget.src = 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=85'
                   }}
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 filter brightness-95 contrast-105"
