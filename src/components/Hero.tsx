@@ -44,11 +44,12 @@ export default function Hero({ onOpenShowreel }: HeroProps) {
             </div>
 
             {/* Editorial Headline */}
-            <h1 className="font-editorial text-4xl sm:text-5xl md:text-6xl xl:text-[4.75rem] font-bold tracking-tight text-white leading-[1.08]">
+            <h1 className="font-editorial text-4xl sm:text-5xl md:text-6xl lg:text-[4.25rem] xl:text-[5rem] font-black tracking-tight text-white leading-[1.02] sm:leading-[0.98] drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
               CRAFTED TO<br />
               BE SEEN.<br />
-              <span className="italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-500">
-                MADE TO BE FELT.
+              <span className="italic font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-500 inline-block drop-shadow-[0_2px_12px_rgba(245,158,11,0.25)]">
+                MADE TO BE<br />
+                FELT.
               </span>
             </h1>
 
