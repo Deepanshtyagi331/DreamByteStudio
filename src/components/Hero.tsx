@@ -10,21 +10,61 @@ export default function Hero({ onOpenShowreel }: HeroProps) {
   return (
     <section id="hero" className="relative min-h-[92vh] flex items-center pt-24 sm:pt-28 pb-16 overflow-hidden bg-[#070709]">
       
-      {/* Background Atmosphere & Ambient Stage Spotlight */}
-      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-        {/* Soft dark vignette */}
-        <div className="absolute inset-0 bg-radial-gradient from-transparent via-[#070709]/80 to-[#070709] z-10" />
-
-        {/* Studio spotlight stand glow in center background */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-72 sm:w-96 h-72 sm:h-96 bg-amber-500/15 rounded-full blur-[100px] sm:blur-[120px]" />
-        <div className="absolute top-1/3 right-1/4 w-60 sm:w-80 h-60 sm:h-80 bg-orange-500/10 rounded-full blur-[80px] sm:blur-[100px]" />
-
-        {/* Ambient Studio Lighting Backdrop */}
+      {/* =========================================================
+          BACKGROUND ATMOSPHERE: ARCHITECTURAL LIGHT & SHADOWS + STUDIO GEAR
+         ========================================================= */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden select-none">
+        
+        {/* Architectural Stone Columns & Archway with Layered Light & Shadows */}
         <img
-          src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?auto=format&fit=crop&w=2000&q=80"
-          alt="Studio Background Lighting"
-          className="w-full h-full object-cover scale-105 opacity-20 filter brightness-50 contrast-125"
+          src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=2000&q=85"
+          alt="Architectural Stone Archway with Layered Light and Shadows"
+          className="w-full h-full object-cover object-center filter brightness-60 contrast-125 saturate-110 scale-105"
         />
+
+        {/* Soft dark vignette overlays ensuring text contrast */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#070709]/95 via-[#070709]/60 to-[#070709]/80" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#070709] via-transparent to-[#070709]/70" />
+
+        {/* Volumetric Warm Golden Sunbeams & Floor Glow */}
+        <div className="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-amber-500/15 rounded-full blur-[140px]" />
+        <div className="absolute bottom-0 left-1/4 right-1/4 h-48 bg-gradient-to-t from-amber-500/10 to-transparent blur-3xl" />
+
+        {/* TOP-CENTER HANGING AMBER DISC FIXTURE (From Option 3 Reference) */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center pointer-events-none">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-amber-500/40 bg-zinc-950/90 shadow-[0_0_50px_rgba(245,158,11,0.5)] flex items-center justify-center backdrop-blur-md">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-amber-300 via-amber-400 to-amber-600 shadow-[0_0_30px_rgba(245,158,11,0.9)] flex items-center justify-center">
+              <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-amber-100/90 blur-[1px]" />
+            </div>
+          </div>
+          <div className="w-[1.5px] h-12 sm:h-16 bg-gradient-to-b from-amber-400/80 via-amber-500/40 to-transparent shadow-[0_0_8px_rgba(245,158,11,0.6)]" />
+        </div>
+
+        {/* UPPER-LEFT FRESNEL SPOTLIGHT ON C-STAND */}
+        <div className="absolute top-12 -left-6 sm:left-2 z-10 pointer-events-none hidden md:block">
+          {/* Angled spotlight flare */}
+          <div className="absolute top-6 left-12 w-[380px] h-[280px] bg-gradient-to-br from-amber-400/30 via-amber-500/10 to-transparent rounded-full blur-[60px] -rotate-12 pointer-events-none" />
+          
+          <div className="relative w-24 sm:w-32 h-24 sm:h-32 rounded-full border-4 border-zinc-800 bg-zinc-950/90 flex items-center justify-center shadow-2xl">
+            <div className="w-16 sm:w-22 h-16 sm:h-22 rounded-full bg-gradient-to-br from-amber-300 via-amber-500 to-amber-700 flex items-center justify-center border-2 border-amber-400 shadow-[0_0_35px_rgba(245,158,11,0.8)]">
+              <div className="w-8 sm:w-10 h-8 sm:h-10 rounded-full bg-amber-100 blur-[2px]" />
+            </div>
+          </div>
+          <div className="w-2 h-72 bg-gradient-to-b from-zinc-700 via-zinc-800 to-transparent mx-auto mt-1 opacity-70" />
+        </div>
+
+        {/* LOWER-LEFT CINEMA CAMERA ON TRIPOD SILHOUETTE */}
+        <div className="absolute -bottom-6 left-2 sm:left-6 z-10 pointer-events-none hidden lg:block opacity-75">
+          <div className="relative w-44 sm:w-52 h-44 sm:h-52">
+            <div className="absolute inset-0 bg-amber-500/10 rounded-full blur-2xl" />
+            <img
+              src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=500&q=80"
+              alt="Cinema Camera Silhouette"
+              className="w-full h-full object-contain filter brightness-40 contrast-150 drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]"
+            />
+          </div>
+        </div>
+
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
@@ -35,7 +75,14 @@ export default function Hero({ onOpenShowreel }: HeroProps) {
              ========================================================= */}
           <div className="lg:col-span-6 space-y-6 sm:space-y-7">
             
-            {/* Top Subtitle Kicker */}
+            {/* Top Option Tag from Reference */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-amber-400/40 bg-zinc-950/80 backdrop-blur-md">
+              <span className="text-[10px] sm:text-xs font-mono font-bold uppercase tracking-[0.2em] text-amber-300">
+                OPTION 3 — LAYERED LIGHT &amp; SHADOWS
+              </span>
+            </div>
+
+            {/* Subtitle Kicker */}
             <div className="flex items-center gap-2.5 sm:gap-3">
               <span className="w-6 sm:w-8 h-[2px] bg-amber-400" />
               <span className="text-[11px] sm:text-xs uppercase font-bold tracking-[0.2em] sm:tracking-[0.25em] text-amber-400/90 font-mono">
@@ -114,22 +161,15 @@ export default function Hero({ onOpenShowreel }: HeroProps) {
           <div className="lg:col-span-6 relative pt-4 sm:pt-8 lg:pt-0 pb-6 sm:pb-8 lg:pb-0">
             <div className="relative mx-auto max-w-sm sm:max-w-md lg:max-w-none">
               
-              {/* Studio Stage Spotlight Background Element (visible on tablet/desktop) */}
-              <div className="absolute -top-10 -left-6 sm:-left-10 z-0 hidden md:block pointer-events-none">
-                <div className="w-24 sm:w-32 h-24 sm:h-32 rounded-full bg-amber-400/20 blur-xl absolute -top-4 -left-4" />
-                <div className="relative w-20 sm:w-28 h-20 sm:h-28 rounded-full border-4 border-zinc-800/80 bg-zinc-950/80 flex items-center justify-center shadow-2xl">
-                  <div className="w-14 sm:w-20 h-14 sm:h-20 rounded-full bg-gradient-to-br from-amber-400 to-amber-600/30 flex items-center justify-center border border-amber-400/50">
-                    <div className="w-8 sm:w-12 h-8 sm:h-12 rounded-full bg-amber-200/90 shadow-[0_0_30px_rgba(245,158,11,0.8)]" />
-                  </div>
-                </div>
-                <div className="w-1.5 h-64 bg-gradient-to-b from-zinc-700 via-zinc-800 to-transparent mx-auto mt-2 opacity-60" />
-              </div>
-
-              {/* MAIN PRIMARY IMAGE (ELEGANT EDITORIAL PORTRAIT) */}
-              <div className="relative ml-auto w-full lg:w-[92%] aspect-[3/4] rounded-3xl sm:rounded-[2.5rem] overflow-hidden border border-amber-400/35 shadow-2xl z-10 group">
+              {/* MAIN PRIMARY IMAGE (INDIAN BRIDAL EDITORIAL PORTRAIT) */}
+              <div className="relative ml-auto w-full lg:w-[92%] aspect-[3/4] rounded-3xl sm:rounded-[2.5rem] overflow-hidden border border-amber-400/40 shadow-2xl z-10 group bg-zinc-950">
                 <img
-                  src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=1200&q=85"
-                  alt="DreamByte Editorial Portrait Model"
+                  src="/images/hero-model-crop.jpg"
+                  alt="DreamByte Indian Bridal Luxury Editorial Model"
+                  onError={(e) => {
+                    // Fallback to high-res traditional Indian bridal portrait if local crop is unavailable
+                    e.currentTarget.src = 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=85'
+                  }}
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 filter brightness-95 contrast-105"
                 />
 
@@ -137,19 +177,22 @@ export default function Hero({ onOpenShowreel }: HeroProps) {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none" />
 
                 {/* Top Corner Amber Frame Accent */}
-                <div className="absolute top-4 right-4 sm:top-5 sm:right-5 w-6 sm:w-8 h-6 sm:h-8 border-t-2 border-r-2 border-amber-400/60 rounded-tr-lg sm:rounded-tr-xl pointer-events-none" />
+                <div className="absolute top-4 right-4 sm:top-5 sm:right-5 w-6 sm:w-8 h-6 sm:h-8 border-t-2 border-r-2 border-amber-400/70 rounded-tr-lg sm:rounded-tr-xl pointer-events-none" />
               </div>
 
-              {/* OVERLAPPING SECONDARY INSET CARD: CINEMATOGRAPHER RIG */}
-              <div className="absolute -bottom-4 -left-2 sm:-bottom-8 sm:-left-6 z-20 w-32 sm:w-44 md:w-52 aspect-square rounded-2xl sm:rounded-[1.8rem] overflow-hidden border-2 border-amber-400/50 shadow-2xl group bg-zinc-950">
+              {/* OVERLAPPING SECONDARY INSET CARD: VINTAGE TYPEWRITER PROP */}
+              <div className="absolute -bottom-4 -left-2 sm:-bottom-8 sm:-left-6 z-20 w-32 sm:w-44 md:w-50 aspect-square rounded-2xl sm:rounded-[1.8rem] overflow-hidden border-2 border-amber-400/50 shadow-2xl group bg-zinc-950">
                 <img
-                  src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80"
-                  alt="Cinema Camera Rig on Set"
-                  className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 filter brightness-90"
+                  src="/images/hero-typewriter-crop.jpg"
+                  alt="Vintage Studio Prop"
+                  onError={(e) => {
+                    e.currentTarget.src = 'https://images.unsplash.com/photo-1526550517342-e086b387edda?auto=format&fit=crop&w=800&q=80'
+                  }}
+                  className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
                 <div className="absolute bottom-2 left-2 sm:bottom-3 sm:left-3 px-1.5 sm:px-2 py-0.5 rounded-md bg-black/80 backdrop-blur-md text-[9px] sm:text-[10px] font-bold text-amber-400 border border-white/10">
-                  On Set • Cinema
+                  On Set • Prop
                 </div>
               </div>
 
